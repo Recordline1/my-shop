@@ -3,6 +3,7 @@ import Link from "next/link";
 import { User } from 'lucide-react';
 import { LogOut } from 'lucide-react';
 import { useAuth } from '@shared/lib/AuthContext';
+import { CartIcon } from '@features/cart/ui/CaertIcon';
 import { useEffect, useState } from 'react'
 
 
@@ -20,8 +21,15 @@ export const Header = () => {
             <div className="flex gap-4 mb-4">
                 <Link href="/">Home</Link>
             </div>
+            {<  CartIcon />}
             <div className="flex gap-4">
-                {user ? <p><User /> Привет, {user.name}!  <button onClick={logout}><LogOut /></button></p> : <a className="flex gap-2 items-center" href="/auth"><User size={16} /> login</a>}
+
+                {user ?
+
+                    <Link className="flex gap-2 items-center" href="/profile">
+                        <User /> Привет, {user.name}!
+                    </Link>
+                    : <Link className="flex gap-2 items-center" href="/auth"><User size={16} /> login</Link>}
 
             </div>
         </header>
