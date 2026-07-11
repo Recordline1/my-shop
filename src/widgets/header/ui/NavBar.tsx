@@ -6,6 +6,7 @@ import { CartIcon } from '@features/cart/ui/CartIcon'
 import { CatalogIcon } from '@shared/icons/CatalogIcon'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { UserDropdown } from '@features/auth/ui/UserDropdown'
 
 type NavBarProps = {
     gradient: React.CSSProperties
@@ -30,7 +31,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-4">
-                    <Link href="/" className="flex items-center gap-2 border border-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-sm font-medium">
+                    <Link href="/" className="flex items-center gap-2 border border-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-lg font-medium">
                         <CatalogIcon className="w-4 h-4" />
                         Catalog
                     </Link>
@@ -51,24 +52,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
 
                     <CartIcon />
 
-                    {user ? (
-                        <div className="flex items-center gap-3">
-                            <Link href="/profile" className="flex items-center gap-2 text-sm text-white hover:text-amber-400 transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-bold">
-                                    {user.name?.[0]?.toUpperCase() || user.email?.[0]?.toUpperCase()}
-                                </div>
-                                <span className="hidden md:block">{user.name || user.email}</span>
-                            </Link>
-                            <button onClick={handleLogout} className="text-gray-400 hover:text-red-400 transition-colors">
-                                <LogOut size={18} />
-                            </button>
-                        </div>
-                    ) : (
-                        <Link href="/auth" className="flex items-center gap-2 text-sm text-white hover:text-amber-400 transition-colors">
-                            <User size={18} />
-                            <span className="hidden md:block">Login</span>
-                        </Link>
-                    )}
+                 <UserDropdown />
 
                     <button className="md:hidden text-white hover:text-amber-400 transition-colors cursor-pointer" onClick={onMenuOpen}>
                         <Menu size={22} />

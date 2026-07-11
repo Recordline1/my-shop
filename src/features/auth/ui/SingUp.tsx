@@ -8,7 +8,10 @@ import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { signUpSchema, type SignUpFormValues } from "../model/signUpSchema";
 
-
+export const gradient = {
+    background: 'linear-gradient(135deg, #2d2d2d 0%, #3d3535 40%, #2d2d2d 100%)',
+    boxShadow: 'inset 0 -1px 0 rgba(255,255,255,0.05)'
+}
 export const SingUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirm, setShowConfirm] = useState(false);
@@ -38,8 +41,13 @@ export const SingUp = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col items-center justify-center border border-gray-300 rounded-md p-4 shadow-sm bg-cyan-100"
+            className="flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md border border-gray-300"
+            style={gradient}
         >
+            <div className="mb-4 text-2xl font-bold text-white border-b border-gray-100 w-full text-center pb-2">
+                Create an account
+            </div>
+
             <input
                 className="mb-2 border rounded-md p-2 border-gray-300 bg-white w-full"
                 {...register('name')} type="text" placeholder="Name" />
