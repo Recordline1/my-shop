@@ -1,8 +1,12 @@
 import { Phone, Truck } from 'lucide-react'
 
-export const TopBar = ({gradient}:{gradient: React.CSSProperties}) => (
+export const gradient = {
+    background: 'linear-gradient(135deg, #2d2d2d 0%, #3d3535 40%, #2d2d2d 100%)',
+    boxShadow: 'inset 0 -1px 0 rgba(255,255,255,0.05)'
+}
+export const TopBar = () => (
 
-    <div className="text-gray-300 text-xs hidden md:block py-2" style={gradient}>
+    <div className="text-gray-400 text-xs hidden md:block py-2" style={gradient} >
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
             <div className="flex items-center gap-6">
                 <span className="flex items-center gap-1.5">

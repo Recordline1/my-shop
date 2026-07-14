@@ -1,11 +1,7 @@
 'use client'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { User, LogOut, ChevronDown } from 'lucide-react'
 import { useAuth } from '@shared/lib/AuthContext'
-import { pb } from '@shared/lib/pocketbase'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { signInSchema, type SignInFormValues } from '../model/signInSchema'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { SingIn } from './SingIn'
@@ -14,9 +10,8 @@ export const UserDropdown = () => {
     const [open, setOpen] = useState(false)
     const { user, logout } = useAuth()
     const router = useRouter()
-    const ref = useRef<HTMLDivElement>(null)
 
-    
+
 
 
     const handleLogout = () => {
@@ -26,7 +21,7 @@ export const UserDropdown = () => {
     }
 
     return (
-        <div className="relative" ref={ref}>
+        <div className="relative">
 
 
             <button
@@ -90,7 +85,7 @@ export const UserDropdown = () => {
                                 </div>
                             </div>
                         ) : (
-                            <SingIn close={() => setOpen(false)} />                      
+                            <SingIn close={() => setOpen(false)} />
                         )}
                     </div>
                 </>

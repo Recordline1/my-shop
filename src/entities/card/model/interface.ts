@@ -1,11 +1,11 @@
 // Interface definition for the slice entities/card
 
 export interface Card {
-  id: string;
-  name: string;
-  image?: string;
-  price: number;
-  description: string;
-  quantity: number;
-  oldpricre?: number;
+    id: string
+    name: string
+    price: number
+    old_price?: number
+    description: string
+    image: string
+    label?: 'new' | 'sale' | 'hit' | 'exclusive'
 }

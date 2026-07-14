@@ -18,7 +18,7 @@ export const Header = () => {
 
     return (
         <header className="sticky top-0 z-50">
-            <TopBar gradient={gradient} />
+            <TopBar/>
             <NavBar gradient={gradient} onMenuOpen={() => setMobileOpen(true)} />
             {mobileOpen && (
                 <MobileMenu
