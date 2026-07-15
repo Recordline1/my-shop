@@ -7,7 +7,7 @@ export const checkoutSchema = z.object({
     firstname: z.string().min(2, 'First name is required'),
     lastname: z.string().min(2, 'Last name is required'),
     email: z.string().email('Invalid email address'),
-    phone: z.string().min(10, 'Phone is required'),
+    phone: z.string().min(12, 'Phone is required'),
     delivery_type: z.enum(deliveryTypes, { message: 'Select delivery type' }),
     address: z.string().min(5, 'Address is required').optional().or(z.literal('')),
     nova_poshta_city: z.string().optional(),

@@ -12,6 +12,7 @@ export const checkoutSubmit = () => {
         register,
         handleSubmit,
         watch,
+        control,
         formState: { errors, isSubmitting },
     } = useForm<CheckoutFormValues>({
         resolver: zodResolver(checkoutSchema),
@@ -22,6 +23,7 @@ export const checkoutSubmit = () => {
     })
 
     const deliveryType = watch('delivery_type')
+    const paymentTypes = watch('payment_type')
 
     const onSubmit = async (data: CheckoutFormValues) => {
         try {
@@ -49,5 +51,17 @@ export const checkoutSubmit = () => {
         }
     }
 
-    return { register, handleSubmit, watch, errors, isSubmitting, onSubmit, items, getTotalPrice, deliveryType }
+    return {
+        register,
+        control,
+        handleSubmit,
+        watch,
+        errors,
+        isSubmitting,
+        onSubmit,
+        items,
+        getTotalPrice,
+        deliveryType,
+        paymentTypes
+    }
 }
