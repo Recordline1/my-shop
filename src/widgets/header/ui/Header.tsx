@@ -2,6 +2,7 @@
 import { TopBar } from './TopBar'
 import { NavBar } from './NavBar'
 import { MobileMenu } from './MobileMenu'
+import {MenuLinks} from './MenuLinks'
 import { useState, useEffect } from 'react'
 
 export const gradient = {
@@ -19,6 +20,7 @@ export const Header = () => {
     return (
         <header className="sticky top-0 z-50">
             <TopBar/>
+            <MenuLinks/>
             <NavBar gradient={gradient} onMenuOpen={() => setMobileOpen(true)} />
             {mobileOpen && (
                 <MobileMenu
