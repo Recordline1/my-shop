@@ -1,9 +1,11 @@
 import { getProducts } from "./get-products";
 
 export async function getProduct(slug: string) {
-  const products = await getProducts();
+  const { items } = await getProducts({
+    limit: Number.MAX_SAFE_INTEGER,
+  });
 
-  return products.find(
-    (product) => product.slug === slug,
+  return items.find(
+    product => product.slug === slug,
   );
 }
