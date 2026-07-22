@@ -3,6 +3,7 @@
 import { useCartStore } from '@entities/cart/model/cartStore';
 import Image from 'next/image';
 import Link from 'next/link';
+import {getProductImage} from "@shared/lib/images/get-product-image";
 import { ArrowLeft, Trash2, ChevronRight, ShoppingBag } from 'lucide-react';
 
 export default function CartPage() {
@@ -40,12 +41,12 @@ export default function CartPage() {
             <div className="flex flex-col gap-3 mb-8">
                 {items.map(item => (
                     <div
-                        key={item.id}
+                        key={item.sku}
                         className="flex items-center gap-4 bg-white border border-gray-100 rounded-xl p-4 shadow-sm"
                     >
                         <div className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-50 shrink-0">
                             <Image
-                                src={`https://pb.portfoliothe.pics/api/files/products/${item.id}/${item.image}`}
+                                src={getProductImage(item)}
                                 alt={item.name}
                                 fill
                                 className="object-cover"
@@ -61,7 +62,7 @@ export default function CartPage() {
 
                         <div className="flex items-center gap-2 shrink-0">
                             <button
-                                onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
+                                onClick={() => updateQuantity(item.sku, Math.max(1, item.quantity - 1))}
                                 className="w-8 h-8 border border-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:border-amber-600 hover:text-amber-600 transition-colors"
                             >
                                 -
@@ -70,7 +71,7 @@ export default function CartPage() {
                                 {item.quantity}
                             </span>
                             <button
-                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                onClick={() => updateQuantity(item.sku, item.quantity + 1)}
                                 className="w-8 h-8 border border-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:border-amber-600 hover:text-amber-600 transition-colors"
                             >
                                 +
@@ -82,7 +83,7 @@ export default function CartPage() {
                         </p>
 
                         <button
-                            onClick={() => removeItem(item.id)}
+                            onClick={() => removeItem(item.sku)}
                             className="text-gray-300 hover:text-red-500 transition-colors cursor-pointer shrink-0"
                         >
                             <Trash2 size={18} />

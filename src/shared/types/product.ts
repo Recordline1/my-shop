@@ -10,6 +10,8 @@ export interface Product {
   price: number;
   old_price: number | null;
 
+   quantity?: number;
+
   sku: string;
 
   brand: Brand;

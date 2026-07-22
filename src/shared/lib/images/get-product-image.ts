@@ -1,7 +1,6 @@
-import { Product } from "@shared/types/product";
 
 const PLACEHOLDER_NO_IMAGE =
   "/images/placeholders/no-image.jpg";
-export function getProductImage(product: Product) {
-    return product.image ?? PLACEHOLDER_NO_IMAGE;
+export function getProductImage({image}:{image?:string}):string {
+    return image ?? PLACEHOLDER_NO_IMAGE;
 }

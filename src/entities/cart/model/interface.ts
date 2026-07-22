@@ -1,6 +1,6 @@
 // Interface definition for the slice entities/cart
-
-export type CartItem = {
+import { Product } from "@shared/types/product";
+export type CartItem  = {
   sku: string;
   name: string;
   price: number;
