@@ -1,4 +1,5 @@
-import { Card } from "../model/interface";
+// import { Card } from "../model/interface";
+import { Product } from "@scripts/shared/types/product";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ const labelConfig: Record<string, { text: string; className: string }> = {
     exclusive: { text: 'Exclusive', className: 'bg-purple-600 text-white' },
 }
 
-export const ProductCard = ({ product, additem }: { product: Card, additem: React.ReactNode }) => {
+export const ProductCard = ({ product, additem }: { product:Product, additem: React.ReactNode }) => {
     const label = product.label ? labelConfig[product.label] : null
     const oldPrice = typeof product.old_price === 'number' ? product.old_price : null
     const hasOldPrice = oldPrice !== null && oldPrice > 0
@@ -20,10 +21,11 @@ export const ProductCard = ({ product, additem }: { product: Card, additem: Reac
     return (
         <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300  bg-white flex flex-col">
             
-            <Link href={`/product/${product.id}`} className="block relative">
+            <Link href={`/product/${product.sku}`} className="block relative">
                 <div className="relative h-56 overflow-hidden ">
                     <Image
-                        src={`https://pb.portfoliothe.pics/api/files/products/${product.id}/${product.image}`}
+                        // src={`https://pb.portfoliothe.pics/api/files/products/${product.id}/${product.image}`}
+                        src={product.image}
                         fill
                         alt={product.name}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

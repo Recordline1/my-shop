@@ -1,4 +1,4 @@
-import products from "@/../public/data/products.json";
+import products from "@/../public/data/json/products.json";
 
 import { Product } from "@shared/types/product";
 

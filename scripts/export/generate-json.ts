@@ -9,7 +9,7 @@ import { generateAllProducts } from "../generate/generate-products";
 import { writeJson } from "../utils/write-json";
 
 export async function generateJson() {
-  const outputDir = resolve("public/data");
+  const outputDir = resolve("public/data/json");
 
   await mkdir(outputDir, { recursive: true });
 

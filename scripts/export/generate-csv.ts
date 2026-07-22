@@ -14,11 +14,9 @@ import { writeCsv } from "../utils/write-csv";
 import { writeJson } from "../utils/write-json";
 
 export async function generateCsv() {
-  const outputDir = resolve("generated");
-  const outputDirJison = resolve("public/data");
+  const outputDir = resolve("public/data/cvs");
 
   await mkdir(outputDir, { recursive: true });
-  await mkdir(outputDirJison, { recursive: true });
 
   const products = generateAllProducts();
 
@@ -36,12 +34,6 @@ export async function generateCsv() {
     resolve(outputDir, "products.csv"),
     exportProducts(products)
   );
-
-  await writeJson(
-    resolve(outputDirJison, "products.json"),
-    products,
-  );
-
 
   console.log("✅ CSV files generated successfully!");
 }
