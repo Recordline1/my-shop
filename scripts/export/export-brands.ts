@@ -1,5 +1,5 @@
-import { Brand } from "../shared/types/brand";
-import { BrandCsv } from "../shared/types/brand-csv";
+import { Brand } from "../core/types/brand";
+import { BrandCsv } from "../core/types/brand-csv";
 
 export function exportBrands(brands: Brand[]): BrandCsv[] {
   return brands.map((brand) => ({

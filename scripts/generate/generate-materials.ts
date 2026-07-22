@@ -1,6 +1,6 @@
-import { randomItem } from "../shared/random";
-import { ProductTypeConfig } from "../shared/types/product-type-config";
-import { Brand } from "../shared/types/brand";
+import { randomItem } from "../utils/random";
+import { ProductTypeConfig } from "../core/types/product-type-config";
+import { Brand } from "../core/types/brand";
 export function generateMaterial(
     productType: ProductTypeConfig,
     brand: Brand,

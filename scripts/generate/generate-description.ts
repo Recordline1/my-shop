@@ -1,5 +1,5 @@
-import { randomItem } from "../shared/random";
-import { ProductIdentity } from "../shared/types/product-identity";
+import { randomItem } from "../utils/random";
+import { ProductIdentity } from "../core/types/product-identity";
 interface DescriptionTemplateData {
   brand: string;
   model: string;

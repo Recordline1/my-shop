@@ -1,5 +1,5 @@
-import {ProductTypeConfig} from "../types//product-type-config";
-import {categoryMap} from "../data/category-map";
+import {ProductTypeConfig} from "../types/product-type-config";
+import {categoryMap} from "./category-map";
 
 export const PRODUCT_TYPES:ProductTypeConfig[] = [
   {

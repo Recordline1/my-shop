@@ -1,8 +1,8 @@
 import { generateProduct } from "./generate-product";
-import { brands } from "../shared/data/brands";
-import { PRODUCT_TYPES } from "../shared/config/product-types";
-import {Product} from "../shared/types/product";
-import {randomItem} from "../shared/random";
+import { brands } from "../core/data/brands";
+import { PRODUCT_TYPES } from "../core/data/product-types";
+import {Product} from "../core/types/product";
+import {randomItem} from "../utils/random";
 import { config } from "../config";
 
 export function generateAllProducts() {

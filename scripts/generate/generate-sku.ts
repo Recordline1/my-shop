@@ -1,4 +1,4 @@
-import { ProductIdentity } from "../shared/types/product-identity";
+import { ProductIdentity } from "../core/types/product-identity";
 
 export function generateSku(
   identity: ProductIdentity, 

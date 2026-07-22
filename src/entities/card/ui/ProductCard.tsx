@@ -1,9 +1,10 @@
-// import { Card } from "../model/interface";
-import { Product } from "@scripts/shared/types/product";
+import {getProductImage} from "@shared/lib/images/get-product-image";
+import { Product } from "@shared/types/product";
 import Image from "next/image";
 import Link from "next/link";
 
-const labelConfig: Record<string, { text: string; className: string }> = {
+const labelConfig: Record<Product['label'], { text: string; className: string }> = {
+    '': { text: '', className: '' },
     new: { text: 'New', className: 'bg-blue-500 text-white' },
     sale: { text: 'Sale', className: 'bg-red-500 text-white' },
     hit: { text: 'Hit', className: 'bg-amber-500 text-white' },
@@ -12,7 +13,7 @@ const labelConfig: Record<string, { text: string; className: string }> = {
 
 export const ProductCard = ({ product, additem }: { product:Product, additem: React.ReactNode }) => {
     const label = product.label ? labelConfig[product.label] : null
-    const oldPrice = typeof product.old_price === 'number' ? product.old_price : null
+    const oldPrice = product.old_price
     const hasOldPrice = oldPrice !== null && oldPrice > 0
     const discount = hasOldPrice
         ? Math.round((1 - product.price / oldPrice) * 100)
@@ -24,8 +25,7 @@ export const ProductCard = ({ product, additem }: { product:Product, additem: Re
             <Link href={`/product/${product.sku}`} className="block relative">
                 <div className="relative h-56 overflow-hidden ">
                     <Image
-                        // src={`https://pb.portfoliothe.pics/api/files/products/${product.id}/${product.image}`}
-                        src={product.image}
+                        src={getProductImage(product)}
                         fill
                         alt={product.name}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -48,7 +48,7 @@ export const ProductCard = ({ product, additem }: { product:Product, additem: Re
             </Link>
 
             <div className="p-4 flex flex-col flex-1">
-                <Link href={`/product/${product.id}`}>
+                <Link href={`/product/${product.sku}`}>
                     <h2 className="font-semibold text-gray-900 text-base mb-1 hover:text-amber-600 transition-colors">
                         {product.name}
                     </h2>

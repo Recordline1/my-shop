@@ -1,5 +1,5 @@
-import { Category } from "../shared/types/category";
-import { CategoryCsv } from "../shared/types/category-csv";
+import { Category } from "../core/types/category";
+import { CategoryCsv } from "../core/types/category-csv";
 
 export function exportCategories(
   categories: Category[],

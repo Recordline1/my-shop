@@ -1,5 +1,5 @@
-import { Product } from "../shared/types/product";
-import { ProductCsv } from "../shared/types/product-csv";
+import { Product } from "../core/types/product";
+import { ProductCsv } from "../core/types/product-csv";
 
 
 export function exportProducts(products: Product[]): ProductCsv[] {

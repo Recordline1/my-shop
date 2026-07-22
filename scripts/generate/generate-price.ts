@@ -1,4 +1,4 @@
-import { randomInt } from '../shared/random';
+import { randomInt } from '../utils/random';
 
 
 export function generatePrice(ranges: { min: number, max: number }, priceMultiplier: number): number {

@@ -1,4 +1,4 @@
-import {randomItem} from "../shared/random";
+import {randomItem} from "../utils/random";
 const labels = [
     "",
     "",

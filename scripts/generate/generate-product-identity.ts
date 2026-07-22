@@ -1,10 +1,10 @@
-import { randomItem } from "../shared/random";
-import { ProductIdentity } from "../shared/types/product-identity";
-import { ProductTypeConfig } from "../shared/types/product-type-config";
+import { randomItem } from "../utils/random";
+import { ProductIdentity } from "../core/types/product-identity";
+import { ProductTypeConfig } from "../core/types/product-type-config";
 import { generateMaterial } from './generate-materials';
 import { generateColors } from './generate-colors';
 import { generateStock } from './generate-stock';
-import { Brand } from "../shared/types/brand";
+import { Brand } from "../core/types/brand";
 
 const collections = [
     "Nord",

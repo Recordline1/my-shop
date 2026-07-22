@@ -1,18 +1,18 @@
 'use client';
 
 import { useCartStore } from '@entities/cart/model/cartStore';
-import { Card } from '@entities/card/model/interface';
+import { Product } from '@shared/types/product';
 import { ShoppingCart, Check } from 'lucide-react';
 
-export const AddToCartButton = ({ product }: { product: Card }) => {
+export const AddToCartButton = ({ product }: { product: Product }) => {
     const { addItem, items } = useCartStore();
-    const inCart = items.some(item => item.id === product.id);
+    const inCart = items.some(item => item.sku === product.sku);
 
     return (
         <button
             disabled={inCart}
             onClick={() => addItem({
-                id: product.id,
+                sku: product.sku,
                 name: product.name,
                 price: product.price,
                 image: product.image,

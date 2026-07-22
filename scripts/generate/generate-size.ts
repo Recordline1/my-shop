@@ -1,5 +1,5 @@
-import { randomInt } from '../shared/random';
-import {ProductTypeConfig} from "../shared/types/product-type-config";
+import { randomInt } from '../utils/random';
+import {ProductTypeConfig} from "../core/types/product-type-config";
 
 
 export function generateSize(ranges: ProductTypeConfig["size"]): string {

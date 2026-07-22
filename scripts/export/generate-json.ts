@@ -1,8 +1,8 @@
 import { mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
-import { brands } from "../shared/data/brands";
-import { categories } from "../shared/data/categories";
+import { brands } from "../core/data/brands";
+import { categories } from "../core/data/categories";
 
 import { generateAllProducts } from "../generate/generate-products";
 
