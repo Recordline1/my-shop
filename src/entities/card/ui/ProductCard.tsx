@@ -11,7 +11,11 @@ const labelConfig: Record<Product['label'], { text: string; className: string }>
     exclusive: { text: 'Exclusive', className: 'bg-purple-600 text-white' },
 }
 
-export const ProductCard = ({ product, additem }: { product:Product, additem: React.ReactNode }) => {
+interface ProductCardProps {
+    product: Product;
+    addItem: React.ReactNode;
+}
+export const ProductCard = ({ product, addItem }:ProductCardProps) => {
     const label = product.label ? labelConfig[product.label] : null
     const oldPrice = product.old_price
     const hasOldPrice = oldPrice !== null && oldPrice > 0
@@ -68,7 +72,7 @@ export const ProductCard = ({ product, additem }: { product:Product, additem: Re
                             </span>
                         )}
                     </div>
-                    {additem}
+                    {addItem}
                 </div>
             </div>
         </div>

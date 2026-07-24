@@ -1,13 +1,21 @@
 import { Product } from "@shared/types/product";
 
 
-export type ProductSort =
-  | "price-asc"
-  | "price-desc"
-  | "name-asc"
-  | "name-desc"
-  | "newest";
+export const PRODUCT_SORT = {
+  POPULAR: "popular",
 
+  PRICE_ASC: "price-asc",
+
+  PRICE_DESC: "price-desc",
+
+  NAME_ASC: "name-asc",
+
+  NAME_DESC: "name-desc",
+} as const;
+
+export type ProductSort =
+    typeof PRODUCT_SORT[keyof typeof PRODUCT_SORT];
+    
 export interface GetProductsOptions {
   category?: string;
   brand?: string;
@@ -43,4 +51,39 @@ export interface ProductsResponse {
   hasNextPage: boolean;
 
   hasPrevPage: boolean;
+}
+
+export interface ProductsQuery {
+  search?: string;
+
+  category?: string;
+
+  brand?: string;
+
+  minPrice?: number;
+
+  maxPrice?: number;
+
+  inStock?: boolean;
+
+  sort?: ProductSort;
+
+  page?: number;
+
+  limit?: number;
+}
+
+export interface SearchParams {
+  [key: string]: string | string[] | undefined;
+}
+
+export interface ProductsSearchParams {
+  page?: string;
+  sort?: string;
+  category?: string;
+  brand?: string;
+  search?: string;
+  minPrice?: string;
+  maxPrice?: string;
+  inStock?: string;
 }

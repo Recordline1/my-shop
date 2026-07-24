@@ -3,7 +3,7 @@
 import { useCartStore } from '@entities/cart/model/cartStore';
 import Image from 'next/image';
 import Link from 'next/link';
-import {getProductImage} from "@shared/lib/images/get-product-image";
+import { getProductImage } from "@shared/lib/images/get-product-image";
 import { ArrowLeft, Trash2, ChevronRight, ShoppingBag } from 'lucide-react';
 
 export default function CartPage() {

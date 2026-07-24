@@ -1,6 +1,6 @@
-import products from "@/../public/data/json/products.json";
+import { getProductsSource } from "./source";
 
-import { Product } from "@shared/types/product";
+import { mapProduct } from "./mapper/index";
 
 import { GetProductsOptions } from "./types";
 
@@ -15,8 +15,10 @@ export async function getProducts(
   options: GetProductsOptions = {},
 ): Promise<ProductsResponse> {
 
-  let result = products as Product[];
+  const source = await getProductsSource();
 
+ let result = source.map(mapProduct);
+ 
   result = applyFilters(result, options);
 
   result = sortProducts(result,options.sort,);

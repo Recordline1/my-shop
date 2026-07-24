@@ -1,0 +1,1 @@
+export { mapJsonProduct as mapProduct } from "./map-json-product";

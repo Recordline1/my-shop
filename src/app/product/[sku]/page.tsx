@@ -1,21 +1,27 @@
-import { getProductById } from "@entities/card/api/getProductById";
+import { getProduct } from "@shared/api/products/get-product"
 import { AddToCartButton } from "@features/cart/ui/AddToCartButton";
+import { getProductImage } from "@shared/lib/images/get-product-image";
 import { ArrowLeft } from 'lucide-react';
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 
-export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = await params
-    const product = await getProductById(id)
-    return (
+export default async function ProductPage({ params }: { params: Promise<{ sku: string }> }) {
+  const { sku } = await params
+  const product = await getProduct(sku)
+
+  if (!product) {
+    notFound();
+  }
+  return (
     <main className="max-w-4xl mx-auto p-8">
       <Link href="/" className="flex gap-2 items-center text-cyan-600 mb-6 "><ArrowLeft /> Back to store</Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="relative h-96 rounded-md overflow-hidden">
           <Image
-            src={`https://pb.portfoliothe.pics/api/files/products/${product.id}/${product.image}`}
+            src={getProductImage(product)}
             fill
             alt={product.name}
             className="object-cover"

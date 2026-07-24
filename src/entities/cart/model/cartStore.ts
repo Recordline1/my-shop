@@ -15,9 +15,9 @@ export const useCartStore = create<CartStore>()(
         set(state => ({ items: [...state.items, { ...item, quantity: 1 }] }))
       }
     },
-    removeItem: (id) => set({ items: get().items.filter((i) => i.sku !== id) }),
+    removeItem: (sku) => set({ items: get().items.filter((i) => i.sku !== sku) }),
     clearCart: () => set({ items: [] }),
-    updateQuantity: (id, quantity) => set({ items: get().items.map((i) => (i.sku === id ? { ...i, quantity } : i)) }),
+    updateQuantity: (sku, quantity) => set({ items: get().items.map((i) => (i.sku === sku ? { ...i, quantity } : i)) }),
     getTotalPrice: () => get().items.reduce((total, item) => total + item.price * item.quantity, 0),
   }),
     { name: 'cart-storage' }
