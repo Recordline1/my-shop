@@ -3,6 +3,8 @@ import { Product } from "@shared/types/product";
 
 export const PRODUCT_SORT = {
   POPULAR: "popular",
+  
+  NEWEST: "newest",
 
   PRICE_ASC: "price-asc",
 
@@ -14,8 +16,8 @@ export const PRODUCT_SORT = {
 } as const;
 
 export type ProductSort =
-    typeof PRODUCT_SORT[keyof typeof PRODUCT_SORT];
-    
+  typeof PRODUCT_SORT[keyof typeof PRODUCT_SORT];
+
 export interface GetProductsOptions {
   category?: string;
   brand?: string;

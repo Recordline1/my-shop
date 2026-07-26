@@ -27,6 +27,8 @@ export const CatalogToolbar = ({ total, sort }: CatalogToolbarProps) => {
                 onChange={handleSortChange}
                 className="border border-gray-200 rounded-lg px-4 py-2.5 w-1/3 text-sm focus:outline-none focus:border-amber-600 transition-colors"
             >
+                <option value={"popular"}>popular</option>
+                <option value={"newest"}>newest</option>
                 <option value={"price-asc"}>price-asc</option>
                 <option value={"price-desc"}>price-desc</option>
                 <option value={"name-asc"}>name-asc</option>

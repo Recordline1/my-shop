@@ -5,6 +5,9 @@ const sortMap: Record<
   ProductSort,
   (a: Product, b: Product) => number
 > = {
+   
+  "popular": (a, b) => b.stock - a.stock,
+
   "price-asc": (a, b) => a.price - b.price,
 
   "price-desc": (a, b) => b.price - a.price,
