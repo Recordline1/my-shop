@@ -1,11 +1,12 @@
-import { Catalog } from '@widgets/catalog/index';
+
+
 
 export default async function Home() {
 
   return (
     <>
       <main className="container mx-auto p-8">
-        < Catalog />
+    Hello
       </main>
     </>
   )

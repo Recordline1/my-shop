@@ -4,19 +4,19 @@ import { CatalogFilters } from "../filters/ui/CatalogFilters";
 import { CatalogPagination } from "../pagination/ui/CatalogPagination";
 import { getCatalogData } from "@widgets/catalog/model/getCatalogData";
 import { parseProductsQuery } from "@shared/api/products/parse-query";
-import {SearchParams} from "@shared/api/products/types";
+import { SearchParams } from "@shared/api/products/types";
 
 export interface CatalogProps {
-  searchParams: SearchParams;
+    searchParams: SearchParams;
 }
 export const Catalog = async ({ searchParams }: CatalogProps) => {
-    
+
     const options = parseProductsQuery(searchParams);
     const data = await getCatalogData(options);
 
     return (
         <>
-            <CatalogToolbar total={data.total} />
+            <CatalogToolbar total={data.total} sort={options.sort} />
 
             <div className="grid grid-cols-[280px_1fr] gap-8">
                 <CatalogFilters />
@@ -24,7 +24,8 @@ export const Catalog = async ({ searchParams }: CatalogProps) => {
                 <ProductGrid products={data.items} />
             </div>
 
-            <CatalogPagination />
+            <CatalogPagination page={data.page} totalPages={data.totalPages} hasNextPage={data.hasNextPage}
+                hasPrevPage={data.hasPrevPage} />
         </>
     )
 }

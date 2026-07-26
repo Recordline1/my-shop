@@ -6,6 +6,7 @@ export const MenuLinks = () => {
     const links = [
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About' },
+        { href: '/catalog', label: 'Catalog' },
         { href: '/contact', label: 'Contact' },
         { href: '/cart', label: 'Cart' },
         { href: '/checkout', label: 'Checkout' },

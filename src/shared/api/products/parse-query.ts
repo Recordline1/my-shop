@@ -1,5 +1,6 @@
-import {GetProductsOptions} from "./types";
-import {ProductSort} from "@shared/api/products/types";
+import { GetProductsOptions } from "./types";
+import { ProductSort } from "@shared/api/products/types";
+import { isProductSort } from "@shared/api/products/lib/is-product-sort";
 
 
 interface SearchParams {
@@ -12,8 +13,12 @@ interface SearchParams {
 export function parseProductsQuery(
   searchParams: SearchParams,
 ): GetProductsOptions {
+  const page =
+    typeof searchParams.page === "string"
+      ? Number(searchParams.page)
+      : 1;
   return {
-    page: searchParams.page ? Number(searchParams.page) : 1,
-    sort: searchParams.sort,
+    page: Number.isNaN(page) || page < 1 ? 1 : page,
+    sort: isProductSort(searchParams.sort) ? searchParams.sort : undefined,
   };
 }
