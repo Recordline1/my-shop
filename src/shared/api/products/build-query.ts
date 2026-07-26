@@ -22,6 +22,14 @@ export function buildProductsQuery(
     } else {
         params.set("sort", query.sort);
     }
+
+    if(!query.search){
+        params.delete("search");
+    } else {
+        params.set("search", query.search);
+    }
+
+
     return params;
 
 }

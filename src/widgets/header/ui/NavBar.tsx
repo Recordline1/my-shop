@@ -1,12 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { Menu, Search, ChevronRight,X } from 'lucide-react'
+import { Menu, Search, ChevronRight, X } from 'lucide-react'
 import { CartIcon } from '@features/cart/ui/CartIcon'
 import { CatalogIcon } from '@shared/icons/CatalogIcon'
 import { categoryIcons } from '@entities/categories/model/categoryIcons'
 import { useEffect, useState } from 'react'
 import { UserDropdown } from '@features/auth/ui/UserDropdown'
 import { getCategories } from '@/entities/categories/api/getCategories'
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
+
 
 type NavBarProps = {
     gradient: React.CSSProperties
@@ -17,6 +19,22 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
     const [catalogOpen, setCatalogOpen] = useState(false)
     const [searchOpen, setSearchOpen] = useState(false)
     const [categories, setCategories] = useState<any[]>([])
+    const [search, setSearch] = useState('')
+
+    const router = useRouter(); 
+
+
+    const heandleSearch = () => {
+        const value = search.trim(); 
+        const params = new URLSearchParams();
+        if(value) {
+            params.set('search', value)
+        }
+        router.push(`/catalog?${params.toString()}`);
+    }   
+
+
+
 
     useEffect(() => {
         getCategories().then(setCategories)
@@ -41,8 +59,11 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                 <div className="flex-1 max-w-sm hidden md:block">
                     <input
                         type="text"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && heandleSearch()}
                         placeholder="Search furniture..."
-                        className="w-full bg-white border border-white/20 text-white placeholder-gray-400 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-amber-600 transition-colors"
+                        className="w-full bg-white border border-white/20  placeholder-gray-400 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-amber-600 transition-colors"
                     />
                 </div>
 
@@ -73,12 +94,12 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
             )}
             {catalogOpen && (
                 <div className="border-t border-white/10 bg-white/5 hidden md:block">
-                    
+
                     <nav className="flex flex-col px-6 py-2 flex-1 overflow-y-auto">
                         {categories.map(category => (
                             <Link
                                 key={category.id}
-                                href={`/?category=${category.slug}`}
+                              href={`/catalog?category=${category.slug}`}
                                 onClick={() => setCatalogOpen(false)}
                                 className="flex items-center justify-between text-white hover:text-amber-400 hover:bg-white/5 transition-colors text-base py-4 px-2 rounded-lg border-b border-white/10"
                             >
