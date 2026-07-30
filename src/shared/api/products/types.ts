@@ -3,7 +3,7 @@ import { Product } from "@shared/types/product";
 
 export const PRODUCT_SORT = {
   POPULAR: "popular",
-  
+
   NEWEST: "newest",
 
   PRICE_ASC: "price-asc",

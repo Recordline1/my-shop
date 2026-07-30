@@ -1,0 +1,1 @@
+export {mapJsonBrand as mapBrand} from "./map-json-brand";

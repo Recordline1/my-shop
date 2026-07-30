@@ -2,13 +2,13 @@ import { Product } from "@shared/types/product";
 
 export function filterByCategory(
   products: Product[],
-  categoryId?: string,
+  categorySlug?: string,
 ) {
-  if (!categoryId) {
+  if (!categorySlug) {
     return products;
   }
 
   return products.filter(
-    (product) => product.category.id === categoryId,
+    (product) => product.category.slug === categorySlug,
   );
 }

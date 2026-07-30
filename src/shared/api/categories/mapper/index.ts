@@ -1,0 +1,1 @@
+export {mapJsonCategories as mapCategories} from "./map-json-categories";

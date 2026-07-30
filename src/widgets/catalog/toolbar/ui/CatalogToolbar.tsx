@@ -29,8 +29,8 @@ export const CatalogToolbar = ({ total, sort }: CatalogToolbarProps) => {
             >
                 <option value={"popular"}>popular</option>
                 <option value={"newest"}>newest</option>
-                <option value={"price-asc"}>price-asc</option>
-                <option value={"price-desc"}>price-desc</option>
+                <option value={"from-cheap"}>price-asc</option>
+                <option value={"from-expensive"}>price-desc</option>
                 <option value={"name-asc"}>name-asc</option>
                 <option value={"name-desc"}>name-desc</option>
 

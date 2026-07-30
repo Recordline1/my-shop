@@ -1,5 +1,6 @@
-import {getProductImage} from "@shared/lib/images/get-product-image";
+import { getProductImage } from "@shared/lib/images/get-product-image";
 import { Product } from "@shared/types/product";
+import { formatPrice } from "@shared/api/products/lib/format-price";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ interface ProductCardProps {
     product: Product;
     addItem: React.ReactNode;
 }
-export const ProductCard = ({ product, addItem }:ProductCardProps) => {
+export const ProductCard = ({ product, addItem }: ProductCardProps) => {
     const label = product.label ? labelConfig[product.label] : null
     const oldPrice = product.old_price
     const hasOldPrice = oldPrice !== null && oldPrice > 0
@@ -25,7 +26,7 @@ export const ProductCard = ({ product, addItem }:ProductCardProps) => {
 
     return (
         <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300  bg-white flex flex-col">
-            
+
             <Link href={`/product/${product.sku}`} className="block relative">
                 <div className="relative h-56 overflow-hidden ">
                     <Image
@@ -64,11 +65,11 @@ export const ProductCard = ({ product, addItem }:ProductCardProps) => {
                 <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center flex-col-reverse mt-auto">
                         <span className="text-lg font-bold text-gray-900">
-                            ${product.price.toLocaleString()}
+                            ${formatPrice(product.price)}
                         </span>
                         {hasOldPrice && (
                             <span className="text-sm text-gray-400 line-through">
-                                ${oldPrice!.toLocaleString()}
+                                ${formatPrice(oldPrice)}
                             </span>
                         )}
                     </div>

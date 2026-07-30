@@ -1,31 +1,21 @@
-import { ProductGrid } from "@widgets/produc-grid/index";
-import { CatalogToolbar } from "../toolbar/ui/CatalogToolbar";
-import { CatalogFilters } from "../filters/ui/CatalogFilters";
-import { CatalogPagination } from "../pagination/ui/CatalogPagination";
 import { getCatalogData } from "@widgets/catalog/model/getCatalogData";
 import { parseProductsQuery } from "@shared/api/products/parse-query";
 import { SearchParams } from "@shared/api/products/types";
+import { getCategories } from "@shared/api/categories/get-categories";
+import { getBrands } from "@shared/api/brands/get-brands";
+import {CatalogLayout} from "@widgets/catalog/ui/CatalogLayout";
+
 
 export interface CatalogProps {
     searchParams: SearchParams;
 }
 export const Catalog = async ({ searchParams }: CatalogProps) => {
-
     const options = parseProductsQuery(searchParams);
+    const categories = await getCategories();
+    const brands = await getBrands();
     const data = await getCatalogData(options);
 
     return (
-        <>
-            <CatalogToolbar total={data.total} sort={options.sort} />
-
-            <div className="grid grid-cols-[280px_1fr] gap-8">
-                <CatalogFilters />
-
-                <ProductGrid products={data.items} />
-            </div>
-
-            <CatalogPagination page={data.page} totalPages={data.totalPages} hasNextPage={data.hasNextPage}
-                hasPrevPage={data.hasPrevPage} />
-        </>
+        <CatalogLayout data={data} filterData={{options,brands,categories}}  />
     )
 }
