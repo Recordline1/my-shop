@@ -1,7 +1,7 @@
 import { Product } from "@shared/types/product";
 import { ProductSort } from "../types";
 
-const sortMap: Record<
+export const sortMap: Record<
   ProductSort,
   (a: Product, b: Product) => number
 > = {

@@ -8,7 +8,7 @@ export default async function CatalogPge({searchParams}:CatalogPageProps ) {
     const params = await searchParams;
     return (
         <>
-            <main className="container mx-auto p-8">
+            <main className="max-w-[1600px] mx-auto p-4">
                 <Catalog searchParams={params} />
             </main>
         </>

@@ -79,13 +79,3 @@ export interface SearchParams {
   [key: string]: string | string[] | undefined;
 }
 
-export interface ProductsSearchParams {
-  page?: string;
-  sort?: string;
-  category?: string;
-  brand?: string;
-  search?: string;
-  minPrice?: string;
-  maxPrice?: string;
-  inStock?: string;
-}
