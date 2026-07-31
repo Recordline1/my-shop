@@ -1,0 +1,9 @@
+{
+    "fsd-explorer.domainLayers": {
+        
+        "entities": true,
+        "features": true,
+        "pages": true,
+        "widgets": true
+    }
+}

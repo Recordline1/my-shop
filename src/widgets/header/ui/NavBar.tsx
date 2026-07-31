@@ -7,7 +7,9 @@ import { categoryIcons } from '@entities/categories/model/categoryIcons'
 import { useEffect, useState } from 'react'
 import { UserDropdown } from '@features/auth/ui/UserDropdown'
 import { getCategories } from '@/entities/categories/api/getCategories'
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { Category } from '@shared/types/category'
+import { useDebounce } from 'use-debounce'
 
 
 type NavBarProps = {
@@ -20,18 +22,19 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
     const [searchOpen, setSearchOpen] = useState(false)
     const [categories, setCategories] = useState<any[]>([])
     const [search, setSearch] = useState('')
+    const [debouncedSearch] = useDebounce(search, 500);
+    const router = useRouter();
 
-    const router = useRouter(); 
 
+    useEffect(() => {
+        const value = debouncedSearch.trim();
 
-    const heandleSearch = () => {
-        const value = search.trim(); 
+        if (!value) return;
+
         const params = new URLSearchParams();
-        if(value) {
-            params.set('search', value)
-        }
+        params.set('search', value);
         router.push(`/catalog?${params.toString()}`);
-    }   
+    }, [debouncedSearch, router]);
 
 
 
@@ -61,7 +64,6 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                         type="text"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        onKeyDown={(e) => e.key === 'Enter' && heandleSearch()}
                         placeholder="Search furniture..."
                         className="w-full bg-white border border-white/20  placeholder-gray-400 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-amber-600 transition-colors"
                     />
@@ -99,7 +101,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                         {categories.map(category => (
                             <Link
                                 key={category.id}
-                              href={`/catalog?category=${category.slug}`}
+                                href={`/catalog?category=${category.slug}`}
                                 onClick={() => setCatalogOpen(false)}
                                 className="flex items-center justify-between text-white hover:text-amber-400 hover:bg-white/5 transition-colors text-base py-4 px-2 rounded-lg border-b border-white/10"
                             >
