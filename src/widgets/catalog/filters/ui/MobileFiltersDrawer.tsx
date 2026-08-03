@@ -72,13 +72,7 @@ export const MobileFiltersDrawer = ({
                     maxPrice={options.maxPrice}
                     inStock={options.inStock}
                 />
-
-                <button
-                    onClick={onClose}
-                    className="w-full mt-6 bg-black text-white py-3 rounded-xl font-medium"
-                >
-                    Aply Filters
-                </button>
+               
             </div>
         </div>
     );

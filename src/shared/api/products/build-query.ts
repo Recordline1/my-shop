@@ -5,6 +5,7 @@ export function buildProductsQuery(
     searchParams: SearchParams,
     query: Partial<GetProductsOptions>,
 ): URLSearchParams {
+    
     const params = new URLSearchParams();
 
     for (const [key, value] of Object.entries(searchParams)) {

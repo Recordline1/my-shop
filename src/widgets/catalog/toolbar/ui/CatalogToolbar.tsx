@@ -20,7 +20,7 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
         push({ sort: e.target.value as ProductSort })
     }
     return (
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-8 border-b border-b-gray-200 pb-4">
             <div className="flex items-center gap-2 md:hidden">
                 <span className="text-gray-400 font-bold">Filter:</span >
                 <button
@@ -37,7 +37,7 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
             <select
                 value={sort ?? PRODUCT_SORT.POPULAR}
                 onChange={handleSortChange}
-                className="border border-gray-200 rounded-lg px-4 py-2.5 w-1/3 text-sm focus:outline-none focus:border-amber-600 transition-colors"
+                className="border  font-bold border-gray-200 rounded-lg px-4 py-2.5  text-sm focus:outline-none focus:border-amber-600 transition-colors"
             >
 
                 <option value={"popular"}>popular</option>

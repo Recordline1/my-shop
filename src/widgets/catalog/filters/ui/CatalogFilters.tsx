@@ -1,48 +1,102 @@
 'use client'
-
+import { useState, useEffect } from "react";
 import { useCatalogNavigation } from "@shared/lib/navigation/use-catalog-navigation";
 import { Category } from "@shared/types/category";
 import { Brand } from "@shared/types/brand";
-import { useState } from "react";
+import { CategorySelect } from "./CategorySelect";
+import { BrandSelect } from "./BrandSelect";
+import { PriceRange } from "./PriceRange";
+import { StockCheckbox } from "./StockCheckbox";
+import { SizeCheckboxes } from "./SizeCheckboxes";
 
 interface CatalogFiltersProps {
     category?: string;
-    categories: Category[]
-    brand?: string
-    brands: Brand[]
-    minPrice?: number
-    maxPrice?: number
-    inStock?: boolean | undefined
+    categories: Category[];
+    brand?: string;
+    brands: Brand[];
+    minPrice?: number;
+    maxPrice?: number;
+    inStock?: boolean;
+    sizes?: string[];
+    availableSizes?: string[];
 }
 
-export const CatalogFilters = ({ category, categories, brands, brand, minPrice, maxPrice, inStock }: CatalogFiltersProps) => {
-    const [min, setMin] = useState(minPrice ?? "");
-    const [max, setMax] = useState(maxPrice ?? "");
+const EMPTY_SIZES: string[] = [];
 
+export const CatalogFilters = ({
+    category,
+    categories,
+    brand,
+    brands,
+    minPrice,
+    maxPrice,
+    inStock,
+    sizes = EMPTY_SIZES,
+    availableSizes,
+}: CatalogFiltersProps) => {
     const { push } = useCatalogNavigation();
 
+    const [draft, setDraft] = useState({
+        category,
+        brand,
+        minPrice,
+        maxPrice,
+        inStock: inStock ?? false,
+        sizes,
+    });
 
-    const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        push({ category: e.target.value, page: 1 });
-    }
-    const handleBrandsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        push({ brand: e.target.value, page: 1 });
-    }
 
-    const handlePriceChange = () => {
+    useEffect(() => {
+        setDraft({
+            category,
+            brand,
+            minPrice,
+            maxPrice,
+            inStock: inStock ?? false,
+            sizes,
+        });
+    }, [category, brand, minPrice, maxPrice, inStock, sizes]);
+
+    const hasChanges =
+        draft.category !== category ||
+        draft.brand !== brand ||
+        draft.minPrice !== minPrice ||
+        draft.maxPrice !== maxPrice ||
+        draft.inStock !== (inStock ?? false) ||
+        JSON.stringify(draft.sizes) !== JSON.stringify(sizes);
+
+    const handleApply = () => {
         push({
+            category: draft.category || undefined,
+            brand: draft.brand || undefined,
+            minPrice: draft.minPrice,
+            maxPrice: draft.maxPrice,
+            inStock: draft.inStock ? true : undefined,
+            sizes: draft.sizes.length ? draft.sizes : undefined,
             page: 1,
-            minPrice: min === "" ? undefined : Number(min),
-            maxPrice: max === "" ? undefined : Number(max),
         });
-    }
+    };
 
-    const handleStockChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleReset = () => {
+        const cleared = {
+            category: undefined,
+            brand: undefined,
+            minPrice: undefined,
+            maxPrice: undefined,
+            inStock: false,
+            sizes: EMPTY_SIZES,
+        };
+        setDraft(cleared);
         push({
-            inStock: e.target.checked ? true : undefined,
-            page: 1
+            category: undefined,
+            brand: undefined,
+            minPrice: undefined,
+            maxPrice: undefined,
+            inStock: undefined,
+            sizes: undefined,
+            page: 1,
         });
-    }
+    };
 
     return (
         <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm sm:p-6">
@@ -52,66 +106,52 @@ export const CatalogFilters = ({ category, categories, brands, brand, minPrice, 
             </div>
 
             <div className="flex flex-wrap items-end gap-4">
-                <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                    <span>Category</span>
-                    <select
-                        value={category}
-                        onChange={handleCategoryChange}
-                        className="min-w-[180px] border border-gray-200 rounded-lg bg-white px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-colors"
-                    >
-                        {categories.map((category) => (
-                            <option key={category.slug} value={category.slug}>
-                                {category.name}
-                            </option>
-                        ))}
-                    </select>
-                </label>
+                <CategorySelect
+                    value={draft.category}
+                    categories={categories}
+                    onChange={(slug) => setDraft((d) => ({ ...d, category: slug || undefined }))}
+                />
 
-                <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                    <span>Brand</span>
-                    <select
-                        value={brand}
-                        onChange={handleBrandsChange}
-                        className="min-w-[180px] border border-gray-200 rounded-lg bg-white px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-colors"
-                    >
-                        {brands.map((brand) => (
-                            <option key={brand.slug} value={brand.slug}>
-                                {brand.name}
-                            </option>
-                        ))}
-                    </select>
-                </label>
+                <BrandSelect
+                    value={draft.brand}
+                    brands={brands}
+                    onChange={(slug) => setDraft((d) => ({ ...d, brand: slug || undefined }))}
+                />
 
-                <div className="flex flex-col gap-2">
-                    <p className="text-sm font-medium text-gray-700">Price</p>
-                    <div className="flex gap-2">
-                        <input
-                            className="w-24 border border-gray-200 rounded-lg bg-white px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-colors"
-                            type="number"
-                            onChange={(e) => setMin(e.target.value)}
-                            value={min}
+                <PriceRange
+                    minPrice={draft.minPrice}
+                    maxPrice={draft.maxPrice}
+                    onMinChange={(v) => setDraft((d) => ({ ...d, minPrice: v }))}
+                    onMaxChange={(v) => setDraft((d) => ({ ...d, maxPrice: v }))}
+                />
 
-                        />
-                        <input
-                            className="w-24 border border-gray-200 rounded-lg bg-white px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-colors"
-                            type="number"
-                            onChange={(e) => setMax(e.target.value)}
-                            value={max}
-                        />
-                        <button  onClick={handlePriceChange} className="border border-amber-600  px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-lg font-medium cursor-pointer"> OK</button>
-                    </div>
-                </div>
+                <SizeCheckboxes
+                    sizes={availableSizes ?? EMPTY_SIZES}
+                    selected={draft.sizes}
+                    onChange={(next) => setDraft((d) => ({ ...d, sizes: next }))}
+                />
 
-                <label className="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm font-medium text-gray-700">
-                    <input
-                        className="h-4 w-4 rounded border-gray-300 text-amber-600 focus:ring-amber-500"
-                        type="checkbox"
-                        checked={inStock ?? false}
-                        onChange={handleStockChange}
-                    />
-                    <span>In stock only</span>
-                </label>
+                <StockCheckbox
+                    checked={draft.inStock}
+                    onChange={(checked) => setDraft((d) => ({ ...d, inStock: checked }))}
+                />
+            </div>
+
+            <div className="mt-6 flex gap-3 border-t border-gray-100 pt-4">
+                <button
+                    onClick={handleApply}
+                    disabled={!hasChanges}
+                    className="flex-1 bg-amber-600 text-white py-2.5 rounded-lg font-medium hover:bg-amber-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                    Apply filters
+                </button>
+                <button
+                    onClick={handleReset}
+                    className="px-4 py-2.5 rounded-lg font-medium text-gray-600 border border-gray-200 hover:bg-gray-50 transition-colors"
+                >
+                    Reset
+                </button>
             </div>
         </div>
-    )
-}
+    );
+};

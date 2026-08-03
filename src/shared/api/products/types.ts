@@ -24,6 +24,7 @@ export interface GetProductsOptions {
 
   colors?: string[];
   materials?: string[];
+  sizes?: string[];
 
   minPrice?: number;
   maxPrice?: number;

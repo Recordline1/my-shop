@@ -39,6 +39,7 @@ export const CatalogLayout = ({ data, filterData }: CatalogLayoutProps) => {
                         minPrice={filterData.options.minPrice}
                         maxPrice={filterData.options.maxPrice}
                         inStock={filterData.options.inStock}
+                        sizes={filterData.options.sizes}                        
                     />
                 </div>
 

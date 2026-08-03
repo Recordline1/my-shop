@@ -23,6 +23,7 @@ export function parseProductsQuery(
   const minPrice = getString(searchParams.minPrice)
   const maxPrice = getString(searchParams.maxPrice)
   const inStock = getString(searchParams.inStock)
+  const sizes = Array.isArray(searchParams.sizes) ? searchParams.sizes : []
 
   return {
     page: Number.isNaN(page) || page < 1 ? 1 : page,
@@ -32,6 +33,7 @@ export function parseProductsQuery(
     brand: brand?.trim() || undefined,
     minPrice: parseNumber(minPrice),
     maxPrice: parseNumber(maxPrice),
+    sizes: sizes.length ? sizes : undefined,
     inStock: inStock === "true" ? true :
       inStock === "false" ? false : undefined,
   };
