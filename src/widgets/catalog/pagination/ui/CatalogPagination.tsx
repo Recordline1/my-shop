@@ -8,9 +8,11 @@ interface CatalogPaginationProps {
     hasPrevPage: boolean
 }
 
-export const CatalogPagination = ({ page, totalPages, hasNextPage, hasPrevPage }: CatalogPaginationProps) => {   
+export const CatalogPagination = ({ page, totalPages, hasNextPage, hasPrevPage }: CatalogPaginationProps) => {
 
     const { push } = useCatalogNavigation();
+
+     if (totalPages <= 1) return null;
     const handleNext = () => {
         push({ page: page + 1 });
     }
@@ -26,7 +28,7 @@ export const CatalogPagination = ({ page, totalPages, hasNextPage, hasPrevPage }
             <button
                 disabled={!hasPrevPage}
                 onClick={handlePrev}
-                className="font-bold disabled:cursor-not-allowed disabled:opacity-50 border border-amber-600  px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-lg font-medium cursor-pointer"
+                className=" disabled:cursor-not-allowed disabled:opacity-50 border border-amber-600  px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-gray-700 font-bold cursor-pointer"
             >prev</button>
             <div className=" text-gray-700 font-medium">
                 <span>Page {page} of {totalPages}</span>
@@ -34,7 +36,7 @@ export const CatalogPagination = ({ page, totalPages, hasNextPage, hasPrevPage }
             <button
                 disabled={!hasNextPage}
                 onClick={handleNext}
-                className="font-bold disabled:cursor-not-allowed disabled:opacity-50 border border-amber-600  px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-lg font-medium cursor-pointer"
+                className=" disabled:cursor-not-allowed disabled:opacity-50 border border-amber-600  px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-gray-700 font-bold cursor-pointer"
             >next</button>
         </div>
     )

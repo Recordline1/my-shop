@@ -6,6 +6,15 @@ import { useCatalogNavigation } from "@shared/lib/navigation/use-catalog-navigat
 import { SlidersHorizontal } from 'lucide-react';
 import { sortMap } from '@shared/api/products/lib/sort-products'
 
+export const SORT_OPTIONS: { value: ProductSort; label: string }[] = [
+  { value: PRODUCT_SORT.POPULAR, label: "popular" },
+  { value: PRODUCT_SORT.NEWEST, label: "newest" },
+  { value: PRODUCT_SORT.PRICE_ASC, label: "price-asc" }, // или измените label на "from-cheap", если так задумывалось
+  { value: PRODUCT_SORT.PRICE_DESC, label: "price-desc" },
+  { value: PRODUCT_SORT.NAME_ASC, label: "name-asc" },
+  { value: PRODUCT_SORT.NAME_DESC, label: "name-desc" },
+];
+
 interface CatalogToolbarProps {
     total: number;
     sort?: ProductSort;
@@ -37,15 +46,16 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
             <select
                 value={sort ?? PRODUCT_SORT.POPULAR}
                 onChange={handleSortChange}
-                className="border  font-bold border-gray-200 rounded-lg px-4 py-2.5  text-sm focus:outline-none focus:border-amber-600 transition-colors"
+                className="border text-gray-600 font-bold rounded-lg px-4 py-2.5  focus:outline-none focus:border-amber-600 transition-colors"
             >
 
-                <option value={"popular"}>popular</option>
-                <option value={"newest"}>newest</option>
-                <option value={"from-cheap"}>price-asc</option>
-                <option value={"from-expensive"}>price-desc</option>
-                <option value={"name-asc"}>name-asc</option>
-                <option value={"name-desc"}>name-desc</option>
+              {SORT_OPTIONS.map((option) => (
+                    <option
+                    className="text-gray-600 font-bold"
+                     key={option.value} value={option.value}>
+                        {option.label}
+                    </option>
+                ))}
 
             </select>
         </div>

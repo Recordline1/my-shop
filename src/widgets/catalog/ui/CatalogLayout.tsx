@@ -29,7 +29,7 @@ export const CatalogLayout = ({ data, filterData }: CatalogLayoutProps) => {
                 sort={filterData.options.sort}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-[280px_minmax(0,1fr)] gap-6">
                 <div className="hidden md:block">
                     <CatalogFilters
                         category={filterData.options.category}
