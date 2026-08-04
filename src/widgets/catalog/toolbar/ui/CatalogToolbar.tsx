@@ -34,6 +34,7 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
                 <span className="text-gray-400 font-bold">Filter:</span >
                 <button
                     onClick={openFilters}
+                    className='cursor-pointer'
                 >
                     <SlidersHorizontal size={20} className="text-amber-600" />
                 </button>
@@ -46,7 +47,7 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
             <select
                 value={sort ?? PRODUCT_SORT.POPULAR}
                 onChange={handleSortChange}
-                className="border text-gray-600 font-bold rounded-lg px-4 py-2.5  focus:outline-none focus:border-amber-600 transition-colors"
+                className="cursor-pointer border text-gray-600 font-bold rounded-lg px-4 py-2.5  focus:outline-none focus:border-amber-600 transition-colors"
             >
 
               {SORT_OPTIONS.map((option) => (

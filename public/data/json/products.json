@@ -1,11 +1,12 @@
 [
   {
-    "name": "Urban Home Nova Sofa",
-    "slug": "urban-home-nova-sofa",
-    "image": "/images/products/sofa/sofa-6.jpg",
-    "description": "Inspired by industrial design, the Urban Home Nova Sofa offers timeless aesthetics and excellent functionality.",
-    "price": 47730,
-    "old_price": 0,
+    "id": "2a4ca350-8ec2-4376-ae8b-9963a9151115",
+    "name": "Urban Home Nord Sofa",
+    "slug": "urban-home-nord-sofa",
+    "image": "/images/products/sofa/sofa-5.jpg",
+    "description": "Urban Home presents the Nord Sofa, made from high-quality Leather with attention to every detail.",
+    "price": 16030,
+    "old_price": 19236,
     "sku": "SOF-URB-0001",
     "category": {
       "id": "cat_001",
@@ -33,26 +34,26 @@
       ]
     },
     "label": "",
-    "stock": 0,
-    "inStock": false,
+    "stock": 4,
+    "inStock": true,
     "colors": [
-      "Dark Blue",
-      "Gray"
+      "Brown"
     ],
     "materials": [
-      "Fabric"
+      "Leather"
     ],
-    "size": "192×92×106 cm",
-    "weight": 59
+    "size": "225×80×100 cm",
+    "weight": 48
   },
   {
-    "name": "Modern Line Solid Coffee Table",
-    "slug": "modern-line-solid-coffee-table",
-    "image": "/images/products/coffee-table/coffee-table-6.jpg",
-    "description": "Inspired by modern design, the Modern Line Solid Coffee Table offers timeless aesthetics and excellent functionality.",
-    "price": 14250,
-    "old_price": 0,
-    "sku": "CTB-MOD-0002",
+    "id": "0ea5af6f-4aee-4998-9a73-5c095761efe7",
+    "name": "Urban Home Stone Coffee Table",
+    "slug": "urban-home-stone-coffee-table",
+    "image": "/images/products/coffee-table/coffee-table-9.jpg",
+    "description": "The Urban Home Stone Coffee Table is crafted from premium Glass in White color. Designed for modern interiors and everyday comfort.",
+    "price": 6140,
+    "old_price": 7368,
+    "sku": "CTB-URB-0002",
     "category": {
       "id": "cat_003",
       "name": "Table",
@@ -60,43 +61,43 @@
       "icon": "table"
     },
     "brand": {
-      "id": "br_004",
-      "name": "Modern Line",
-      "slug": "modern-line",
-      "country": "Italy",
-      "description": "Premium Italian furniture.",
-      "style": "Modern",
-      "priceMultiplier": 1.5,
+      "id": "br_003",
+      "name": "Urban Home",
+      "slug": "urban-home",
+      "country": "Germany",
+      "description": "Modern furniture with industrial style.",
+      "style": "Industrial",
+      "priceMultiplier": 1.2,
       "preferredMaterials": [
-        "walnut",
-        "chrome",
-        "velvet"
+        "steel",
+        "wood",
+        "leather"
       ],
       "preferredColors": [
-        "cream",
         "black",
-        "terracotta"
+        "charcoal",
+        "gray"
       ]
     },
-    "label": "hit",
-    "stock": 9,
+    "label": "sale",
+    "stock": 20,
     "inStock": true,
     "colors": [
-      "Black",
-      "Walnut"
+      "White"
     ],
     "materials": [
-      "Wood"
+      "Glass"
     ],
-    "size": "81×41×62 cm",
-    "weight": 13
+    "size": "81×46×64 cm",
+    "weight": 25
   },
   {
-    "name": "Modern Line Compact TV Stand",
-    "slug": "modern-line-compact-tv-stand",
-    "image": "/images/products/tv-stand/tv-stand-9.jpg",
-    "description": "Inspired by modern design, the Modern Line Compact TV Stand offers timeless aesthetics and excellent functionality.",
-    "price": 21140,
+    "id": "3d8a405c-e2fe-4539-ae84-6a1fa08b6bc9",
+    "name": "Modern Line Vision TV Stand",
+    "slug": "modern-line-vision-tv-stand",
+    "image": "/images/products/tv-stand/tv-stand-5.jpg",
+    "description": "The Modern Line Vision TV Stand is crafted from premium Metal in Black color. Designed for modern interiors and everyday comfort.",
+    "price": 8390,
     "old_price": 0,
     "sku": "TVS-MOD-0003",
     "category": {
@@ -124,27 +125,73 @@
         "terracotta"
       ]
     },
-    "label": "sale",
-    "stock": 3,
+    "label": "",
+    "stock": 20,
     "inStock": true,
     "colors": [
-      "White",
-      "Oak"
+      "Black"
     ],
     "materials": [
-      "MDF"
+      "Metal"
     ],
-    "size": "171×64×49 cm",
-    "weight": 33
+    "size": "205×50×49 cm",
+    "weight": 19
   },
   {
-    "name": "Modern Line Dream Bed",
-    "slug": "modern-line-dream-bed",
-    "image": "/images/products/bed/bed-3.jpg",
-    "description": "Modern Line presents the Dream Bed, made from high-quality Fabric with attention to every detail.",
-    "price": 24290,
-    "old_price": 29148,
-    "sku": "BED-MOD-0004",
+    "id": "6c82ca29-426e-4652-8815-b77edb0a3937",
+    "name": "Oak Studio Dream Bed",
+    "slug": "oak-studio-dream-bed",
+    "image": "/images/products/bed/bed-9.jpg",
+    "description": "Oak Studio presents the Dream Bed, made from high-quality Fabric with attention to every detail.",
+    "price": 44040,
+    "old_price": 0,
+    "sku": "BED-OAK-0004",
+    "category": {
+      "id": "cat_004",
+      "name": "Bedroom",
+      "slug": "bedroom",
+      "icon": "bed"
+    },
+    "brand": {
+      "id": "br_005",
+      "name": "Oak Studio",
+      "slug": "oak-studio",
+      "country": "Canada",
+      "description": "Natural oak furniture.",
+      "style": "Natural",
+      "priceMultiplier": 0.9,
+      "preferredMaterials": [
+        "oak",
+        "maple",
+        "wool"
+      ],
+      "preferredColors": [
+        "natural",
+        "taupe",
+        "sage"
+      ]
+    },
+    "label": "",
+    "stock": 8,
+    "inStock": true,
+    "colors": [
+      "Gray"
+    ],
+    "materials": [
+      "Fabric"
+    ],
+    "size": "198×114×201 cm",
+    "weight": 37
+  },
+  {
+    "id": "e4d53197-56c4-4bfb-bc6f-4e85c0907064",
+    "name": "Modern Line Classic Wardrobe",
+    "slug": "modern-line-classic-wardrobe",
+    "image": "/images/products/wardrobe/wardrobe-7.jpg",
+    "description": "Inspired by modern design, the Modern Line Classic Wardrobe offers timeless aesthetics and excellent functionality.",
+    "price": 39810,
+    "old_price": 47772,
+    "sku": "WRD-MOD-0005",
     "category": {
       "id": "cat_004",
       "name": "Bedroom",
@@ -170,31 +217,76 @@
         "terracotta"
       ]
     },
-    "label": "exclusive",
-    "stock": 17,
+    "label": "sale",
+    "stock": 8,
     "inStock": true,
     "colors": [
-      "Gray"
+      "Oak"
     ],
     "materials": [
-      "Fabric"
+      "Wood"
     ],
-    "size": "154×135×210 cm",
-    "weight": 37
+    "size": "226×235×60 cm",
+    "weight": 127
   },
   {
-    "name": "Scandi House Space Wardrobe",
-    "slug": "scandi-house-space-wardrobe",
-    "image": "/images/products/wardrobe/wardrobe-4.jpg",
-    "description": "Inspired by scandinavian design, the Scandi House Space Wardrobe offers timeless aesthetics and excellent functionality.",
-    "price": 17970,
+    "id": "e364cc23-cfdf-43eb-843e-b1424e9d3a4d",
+    "name": "WoodCraft Prime Dining Table",
+    "slug": "woodcraft-prime-dining-table",
+    "image": "/images/products/dining-table/dining-table-4.jpg",
+    "description": "The WoodCraft Prime Dining Table is crafted from premium Metal in Oak color. Designed for modern interiors and everyday comfort.",
+    "price": 11790,
     "old_price": 0,
-    "sku": "WRD-SCA-0005",
+    "sku": "DTB-WOO-0006",
     "category": {
-      "id": "cat_004",
-      "name": "Bedroom",
-      "slug": "bedroom",
-      "icon": "bed"
+      "id": "cat_003",
+      "name": "Table",
+      "slug": "table",
+      "icon": "table"
+    },
+    "brand": {
+      "id": "br_001",
+      "name": "WoodCraft",
+      "slug": "woodcraft",
+      "country": "Sweden",
+      "description": "Scandinavian wooden furniture.",
+      "style": "Scandinavian",
+      "priceMultiplier": 1,
+      "preferredMaterials": [
+        "oak",
+        "pine"
+      ],
+      "preferredColors": [
+        "beige",
+        "brown"
+      ]
+    },
+    "label": "new",
+    "stock": 8,
+    "inStock": true,
+    "colors": [
+      "Oak"
+    ],
+    "materials": [
+      "Metal"
+    ],
+    "size": "172×77×97 cm",
+    "weight": 45
+  },
+  {
+    "id": "796c5741-b356-4163-bc86-a2e3bd789db8",
+    "name": "Scandi House Soft Dining Chair",
+    "slug": "scandi-house-soft-dining-chair",
+    "image": "/images/products/dining-chair/dining-chair-8.jpg",
+    "description": "Scandi House presents the Soft Dining Chair, made from high-quality Wood with attention to every detail.",
+    "price": 5740,
+    "old_price": 0,
+    "sku": "DCH-SCA-0007",
+    "category": {
+      "id": "cat_002",
+      "name": "Chair",
+      "slug": "chair",
+      "icon": "rocking-chair"
     },
     "brand": {
       "id": "br_008",
@@ -215,208 +307,32 @@
         "dusty-blue"
       ]
     },
-    "label": "sale",
-    "stock": 8,
+    "label": "",
+    "stock": 7,
     "inStock": true,
     "colors": [
-      "Oak"
-    ],
-    "materials": [
-      "MDF"
-    ],
-    "size": "136×219×52 cm",
-    "weight": 127
-  },
-  {
-    "name": "Nordic Living Oak Dining Table",
-    "slug": "nordic-living-oak-dining-table",
-    "image": "/images/products/dining-table/dining-table-7.jpg",
-    "description": "The Nordic Living Oak Dining Table is crafted from premium Wood in Oak color. Designed for modern interiors and everyday comfort.",
-    "price": 17060,
-    "old_price": 0,
-    "sku": "DTB-NOR-0006",
-    "category": {
-      "id": "cat_003",
-      "name": "Table",
-      "slug": "table",
-      "icon": "table"
-    },
-    "brand": {
-      "id": "br_002",
-      "name": "Nordic Living",
-      "slug": "nordic-living",
-      "country": "Denmark",
-      "description": "Minimalist furniture for modern homes.",
-      "style": "Minimalist",
-      "priceMultiplier": 0.8,
-      "preferredMaterials": [
-        "birch",
-        "ash",
-        "linen"
-      ],
-      "preferredColors": [
-        "white",
-        "gray",
-        "sand"
-      ]
-    },
-    "label": "sale",
-    "stock": 5,
-    "inStock": true,
-    "colors": [
-      "Oak"
+      "Beige"
     ],
     "materials": [
       "Wood"
     ],
-    "size": "189×75×89 cm",
-    "weight": 64
+    "size": "41×85×59 cm",
+    "weight": 6
   },
   {
-    "name": "Casa Nova Leaf Dining Chair",
-    "slug": "casa-nova-leaf-dining-chair",
-    "image": "/images/products/dining-chair/dining-chair-1.jpg",
-    "description": "Casa Nova presents the Leaf Dining Chair, made from high-quality Metal with attention to every detail.",
-    "price": 8250,
-    "old_price": 9900,
-    "sku": "DCH-CAS-0007",
-    "category": {
-      "id": "cat_002",
-      "name": "Chair",
-      "slug": "chair",
-      "icon": "rocking-chair"
-    },
-    "brand": {
-      "id": "br_006",
-      "name": "Casa Nova",
-      "slug": "casa-nova",
-      "country": "Spain",
-      "description": "Elegant furniture with Mediterranean design.",
-      "style": "Mediterranean",
-      "priceMultiplier": 1.3,
-      "preferredMaterials": [
-        "teak",
-        "stone",
-        "linen"
-      ],
-      "preferredColors": [
-        "terracotta",
-        "sand",
-        "olive"
-      ]
-    },
-    "label": "new",
-    "stock": 13,
-    "inStock": true,
-    "colors": [
-      "Black"
-    ],
-    "materials": [
-      "Metal"
-    ],
-    "size": "54×84×52 cm",
-    "weight": 8
-  },
-  {
-    "name": "WoodCraft Focus Desk",
-    "slug": "woodcraft-focus-desk",
-    "image": "/images/products/desk/desk-2.jpg",
-    "description": "The WoodCraft Focus Desk is crafted from premium Wood in Black color. Designed for modern interiors and everyday comfort.",
-    "price": 8160,
-    "old_price": 0,
+    "id": "62394378-610b-4cfd-b5bd-f13c853af643",
+    "name": "WoodCraft Work Desk",
+    "slug": "woodcraft-work-desk",
+    "image": "/images/products/desk/desk-10.jpg",
+    "description": "Inspired by scandinavian design, the WoodCraft Work Desk offers timeless aesthetics and excellent functionality.",
+    "price": 9010,
+    "old_price": 10812,
     "sku": "DSK-WOO-0008",
     "category": {
       "id": "cat_006",
       "name": "Office",
       "slug": "office",
       "icon": "lamp-desk"
-    },
-    "brand": {
-      "id": "br_001",
-      "name": "WoodCraft",
-      "slug": "woodcraft",
-      "country": "Sweden",
-      "description": "Scandinavian wooden furniture.",
-      "style": "Scandinavian",
-      "priceMultiplier": 1,
-      "preferredMaterials": [
-        "oak",
-        "pine"
-      ],
-      "preferredColors": [
-        "beige",
-        "brown"
-      ]
-    },
-    "label": "sale",
-    "stock": 3,
-    "inStock": true,
-    "colors": [
-      "Black",
-      "White"
-    ],
-    "materials": [
-      "Wood"
-    ],
-    "size": "174×73×66 cm",
-    "weight": 29
-  },
-  {
-    "name": "WoodCraft Pro Office Chair",
-    "slug": "woodcraft-pro-office-chair",
-    "image": "/images/products/office-chair/office-chair-9.jpg",
-    "description": "The WoodCraft Pro Office Chair is crafted from premium Leather in Black color. Designed for modern interiors and everyday comfort.",
-    "price": 12000,
-    "old_price": 0,
-    "sku": "OCH-WOO-0009",
-    "category": {
-      "id": "cat_006",
-      "name": "Office",
-      "slug": "office",
-      "icon": "lamp-desk"
-    },
-    "brand": {
-      "id": "br_001",
-      "name": "WoodCraft",
-      "slug": "woodcraft",
-      "country": "Sweden",
-      "description": "Scandinavian wooden furniture.",
-      "style": "Scandinavian",
-      "priceMultiplier": 1,
-      "preferredMaterials": [
-        "oak",
-        "pine"
-      ],
-      "preferredColors": [
-        "beige",
-        "brown"
-      ]
-    },
-    "label": "",
-    "stock": 11,
-    "inStock": true,
-    "colors": [
-      "Black"
-    ],
-    "materials": [
-      "Leather"
-    ],
-    "size": "70×130×58 cm",
-    "weight": 11
-  },
-  {
-    "name": "WoodCraft Nova Sofa",
-    "slug": "woodcraft-nova-sofa",
-    "image": "/images/products/sofa/sofa-5.jpg",
-    "description": "WoodCraft presents the Nova Sofa, made from high-quality Fabric with attention to every detail.",
-    "price": 31160,
-    "old_price": 37392,
-    "sku": "SOF-WOO-0010",
-    "category": {
-      "id": "cat_001",
-      "name": "Sofa",
-      "slug": "sofa",
-      "icon": "sofa"
     },
     "brand": {
       "id": "br_001",
@@ -442,18 +358,111 @@
       "Gray"
     ],
     "materials": [
-      "Fabric"
+      "MDF"
     ],
-    "size": "212×92×89 cm",
-    "weight": 53
+    "size": "157×73×63 cm",
+    "weight": 45
   },
   {
-    "name": "Loft Design Flow Coffee Table",
-    "slug": "loft-design-flow-coffee-table",
+    "id": "71a87745-03b0-4b74-af45-7d5a0936f258",
+    "name": "Scandi House Comfort Office Chair",
+    "slug": "scandi-house-comfort-office-chair",
+    "image": "/images/products/office-chair/office-chair-10.jpg",
+    "description": "The Scandi House Comfort Office Chair is crafted from premium Fabric in Gray color. Designed for modern interiors and everyday comfort.",
+    "price": 12430,
+    "old_price": 0,
+    "sku": "OCH-SCA-0009",
+    "category": {
+      "id": "cat_006",
+      "name": "Office",
+      "slug": "office",
+      "icon": "lamp-desk"
+    },
+    "brand": {
+      "id": "br_008",
+      "name": "Scandi House",
+      "slug": "scandi-house",
+      "country": "Finland",
+      "description": "Comfortable Scandinavian furniture.",
+      "style": "Scandinavian",
+      "priceMultiplier": 1,
+      "preferredMaterials": [
+        "pine",
+        "birch",
+        "wool"
+      ],
+      "preferredColors": [
+        "white",
+        "soft-gray",
+        "dusty-blue"
+      ]
+    },
+    "label": "",
+    "stock": 20,
+    "inStock": true,
+    "colors": [
+      "Gray"
+    ],
+    "materials": [
+      "Fabric"
+    ],
+    "size": "69×100×63 cm",
+    "weight": 16
+  },
+  {
+    "id": "8915c1ea-2187-4d78-ab08-327fa7fba2a6",
+    "name": "Modern Line Bergen Sofa",
+    "slug": "modern-line-bergen-sofa",
+    "image": "/images/products/sofa/sofa-3.jpg",
+    "description": "The Modern Line Bergen Sofa is crafted from premium Fabric in Green color. Designed for modern interiors and everyday comfort.",
+    "price": 30290,
+    "old_price": 0,
+    "sku": "SOF-MOD-0010",
+    "category": {
+      "id": "cat_001",
+      "name": "Sofa",
+      "slug": "sofa",
+      "icon": "sofa"
+    },
+    "brand": {
+      "id": "br_004",
+      "name": "Modern Line",
+      "slug": "modern-line",
+      "country": "Italy",
+      "description": "Premium Italian furniture.",
+      "style": "Modern",
+      "priceMultiplier": 1.5,
+      "preferredMaterials": [
+        "walnut",
+        "chrome",
+        "velvet"
+      ],
+      "preferredColors": [
+        "cream",
+        "black",
+        "terracotta"
+      ]
+    },
+    "label": "",
+    "stock": 16,
+    "inStock": true,
+    "colors": [
+      "Green"
+    ],
+    "materials": [
+      "Fabric"
+    ],
+    "size": "186×84×107 cm",
+    "weight": 55
+  },
+  {
+    "id": "2a2d7cac-35c4-4f4f-afcb-d9f39c407dfc",
+    "name": "Loft Design Stone Coffee Table",
+    "slug": "loft-design-stone-coffee-table",
     "image": "/images/products/coffee-table/coffee-table-7.jpg",
-    "description": "The Loft Design Flow Coffee Table is crafted from premium Wood in White color. Designed for modern interiors and everyday comfort.",
-    "price": 12000,
-    "old_price": 14400,
+    "description": "Inspired by loft design, the Loft Design Stone Coffee Table offers timeless aesthetics and excellent functionality.",
+    "price": 12940,
+    "old_price": 0,
     "sku": "CTB-LOF-0011",
     "category": {
       "id": "cat_003",
@@ -480,31 +489,123 @@
         "mustard"
       ]
     },
-    "label": "new",
-    "stock": 5,
+    "label": "sale",
+    "stock": 15,
     "inStock": true,
     "colors": [
-      "White"
+      "Black"
     ],
     "materials": [
-      "Wood"
+      "Metal"
     ],
-    "size": "119×40×80 cm",
-    "weight": 19
+    "size": "94×46×66 cm",
+    "weight": 10
   },
   {
-    "name": "WoodCraft Compact TV Stand",
-    "slug": "woodcraft-compact-tv-stand",
-    "image": "/images/products/tv-stand/tv-stand-8.jpg",
-    "description": "Inspired by scandinavian design, the WoodCraft Compact TV Stand offers timeless aesthetics and excellent functionality.",
-    "price": 17630,
+    "id": "187855a7-f8b4-4d30-9dbf-552560f46989",
+    "name": "Oak Studio Vision TV Stand",
+    "slug": "oak-studio-vision-tv-stand",
+    "image": "/images/products/tv-stand/tv-stand-2.jpg",
+    "description": "Oak Studio presents the Vision TV Stand, made from high-quality MDF with attention to every detail.",
+    "price": 11670,
     "old_price": 0,
-    "sku": "TVS-WOO-0012",
+    "sku": "TVS-OAK-0012",
     "category": {
       "id": "cat_003",
       "name": "Table",
       "slug": "table",
       "icon": "table"
+    },
+    "brand": {
+      "id": "br_005",
+      "name": "Oak Studio",
+      "slug": "oak-studio",
+      "country": "Canada",
+      "description": "Natural oak furniture.",
+      "style": "Natural",
+      "priceMultiplier": 0.9,
+      "preferredMaterials": [
+        "oak",
+        "maple",
+        "wool"
+      ],
+      "preferredColors": [
+        "natural",
+        "taupe",
+        "sage"
+      ]
+    },
+    "label": "hit",
+    "stock": 15,
+    "inStock": true,
+    "colors": [
+      "Black"
+    ],
+    "materials": [
+      "MDF"
+    ],
+    "size": "181×48×48 cm",
+    "weight": 34
+  },
+  {
+    "id": "b989c673-23e6-4d4d-a1fd-9b01a381b8a3",
+    "name": "WoodCraft Soft Bed",
+    "slug": "woodcraft-soft-bed",
+    "image": "/images/products/bed/bed-2.jpg",
+    "description": "WoodCraft presents the Soft Bed, made from high-quality Fabric with attention to every detail.",
+    "price": 45750,
+    "old_price": 0,
+    "sku": "BED-WOO-0013",
+    "category": {
+      "id": "cat_004",
+      "name": "Bedroom",
+      "slug": "bedroom",
+      "icon": "bed"
+    },
+    "brand": {
+      "id": "br_001",
+      "name": "WoodCraft",
+      "slug": "woodcraft",
+      "country": "Sweden",
+      "description": "Scandinavian wooden furniture.",
+      "style": "Scandinavian",
+      "priceMultiplier": 1,
+      "preferredMaterials": [
+        "oak",
+        "pine"
+      ],
+      "preferredColors": [
+        "beige",
+        "brown"
+      ]
+    },
+    "label": "",
+    "stock": 15,
+    "inStock": true,
+    "colors": [
+      "Beige",
+      "White"
+    ],
+    "materials": [
+      "Fabric"
+    ],
+    "size": "189×137×220 cm",
+    "weight": 42
+  },
+  {
+    "id": "e7fb4829-6e34-4cec-9fe8-de429770fba2",
+    "name": "WoodCraft Slide Wardrobe",
+    "slug": "woodcraft-slide-wardrobe",
+    "image": "/images/products/wardrobe/wardrobe-7.jpg",
+    "description": "The WoodCraft Slide Wardrobe is crafted from premium Wood in Gray color. Designed for modern interiors and everyday comfort.",
+    "price": 21000,
+    "old_price": 0,
+    "sku": "WRD-WOO-0014",
+    "category": {
+      "id": "cat_004",
+      "name": "Bedroom",
+      "slug": "bedroom",
+      "icon": "bed"
     },
     "brand": {
       "id": "br_001",
@@ -527,28 +628,75 @@
     "stock": 9,
     "inStock": true,
     "colors": [
-      "White",
-      "Black"
+      "Gray"
     ],
     "materials": [
       "Wood"
     ],
-    "size": "130×48×41 cm",
-    "weight": 25
+    "size": "230×208×59 cm",
+    "weight": 81
   },
   {
-    "name": "Urban Home Nova Bed",
-    "slug": "urban-home-nova-bed",
-    "image": "/images/products/bed/bed-5.jpg",
-    "description": "Inspired by industrial design, the Urban Home Nova Bed offers timeless aesthetics and excellent functionality.",
-    "price": 41750,
-    "old_price": 50100,
-    "sku": "BED-URB-0013",
+    "id": "f9555b4c-dcfc-4056-96ba-baa8ad701506",
+    "name": "Modern Line Origin Dining Table",
+    "slug": "modern-line-origin-dining-table",
+    "image": "/images/products/dining-table/dining-table-5.jpg",
+    "description": "The Modern Line Origin Dining Table is crafted from premium Wood in Oak color. Designed for modern interiors and everyday comfort.",
+    "price": 10510,
+    "old_price": 0,
+    "sku": "DTB-MOD-0015",
     "category": {
-      "id": "cat_004",
-      "name": "Bedroom",
-      "slug": "bedroom",
-      "icon": "bed"
+      "id": "cat_003",
+      "name": "Table",
+      "slug": "table",
+      "icon": "table"
+    },
+    "brand": {
+      "id": "br_004",
+      "name": "Modern Line",
+      "slug": "modern-line",
+      "country": "Italy",
+      "description": "Premium Italian furniture.",
+      "style": "Modern",
+      "priceMultiplier": 1.5,
+      "preferredMaterials": [
+        "walnut",
+        "chrome",
+        "velvet"
+      ],
+      "preferredColors": [
+        "cream",
+        "black",
+        "terracotta"
+      ]
+    },
+    "label": "",
+    "stock": 5,
+    "inStock": true,
+    "colors": [
+      "Oak",
+      "Walnut"
+    ],
+    "materials": [
+      "Wood"
+    ],
+    "size": "213×76×88 cm",
+    "weight": 53
+  },
+  {
+    "id": "28158f6f-cc4c-40a6-81ff-24ff03f0f7be",
+    "name": "Urban Home Soft Dining Chair",
+    "slug": "urban-home-soft-dining-chair",
+    "image": "/images/products/dining-chair/dining-chair-4.jpg",
+    "description": "The Urban Home Soft Dining Chair is crafted from premium Metal in Beige color. Designed for modern interiors and everyday comfort.",
+    "price": 7040,
+    "old_price": 0,
+    "sku": "DCH-URB-0016",
+    "category": {
+      "id": "cat_002",
+      "name": "Chair",
+      "slug": "chair",
+      "icon": "rocking-chair"
     },
     "brand": {
       "id": "br_003",
@@ -569,299 +717,32 @@
         "gray"
       ]
     },
-    "label": "",
-    "stock": 10,
+    "label": "new",
+    "stock": 19,
     "inStock": true,
     "colors": [
-      "Brown",
-      "Gray"
+      "Beige"
     ],
     "materials": [
-      "Leather"
+      "Metal"
     ],
-    "size": "155×99×208 cm",
-    "weight": 75
+    "size": "53×99×47 cm",
+    "weight": 11
   },
   {
-    "name": "Scandi House Slide Wardrobe",
-    "slug": "scandi-house-slide-wardrobe",
-    "image": "/images/products/wardrobe/wardrobe-10.jpg",
-    "description": "The Scandi House Slide Wardrobe is crafted from premium MDF in Walnut color. Designed for modern interiors and everyday comfort.",
-    "price": 30710,
-    "old_price": 36852,
-    "sku": "WRD-SCA-0014",
-    "category": {
-      "id": "cat_004",
-      "name": "Bedroom",
-      "slug": "bedroom",
-      "icon": "bed"
-    },
-    "brand": {
-      "id": "br_008",
-      "name": "Scandi House",
-      "slug": "scandi-house",
-      "country": "Finland",
-      "description": "Comfortable Scandinavian furniture.",
-      "style": "Scandinavian",
-      "priceMultiplier": 1,
-      "preferredMaterials": [
-        "pine",
-        "birch",
-        "wool"
-      ],
-      "preferredColors": [
-        "white",
-        "soft-gray",
-        "dusty-blue"
-      ]
-    },
-    "label": "",
-    "stock": 14,
-    "inStock": true,
-    "colors": [
-      "Walnut"
-    ],
-    "materials": [
-      "MDF"
-    ],
-    "size": "247×191×65 cm",
-    "weight": 65
-  },
-  {
-    "name": "WoodCraft Stone Dining Table",
-    "slug": "woodcraft-stone-dining-table",
-    "image": "/images/products/dining-table/dining-table-1.jpg",
-    "description": "Inspired by scandinavian design, the WoodCraft Stone Dining Table offers timeless aesthetics and excellent functionality.",
-    "price": 20770,
-    "old_price": 0,
-    "sku": "DTB-WOO-0015",
-    "category": {
-      "id": "cat_003",
-      "name": "Table",
-      "slug": "table",
-      "icon": "table"
-    },
-    "brand": {
-      "id": "br_001",
-      "name": "WoodCraft",
-      "slug": "woodcraft",
-      "country": "Sweden",
-      "description": "Scandinavian wooden furniture.",
-      "style": "Scandinavian",
-      "priceMultiplier": 1,
-      "preferredMaterials": [
-        "oak",
-        "pine"
-      ],
-      "preferredColors": [
-        "beige",
-        "brown"
-      ]
-    },
-    "label": "",
-    "stock": 8,
-    "inStock": true,
-    "colors": [
-      "White",
-      "Oak"
-    ],
-    "materials": [
-      "Wood"
-    ],
-    "size": "207×76×99 cm",
-    "weight": 28
-  },
-  {
-    "name": "Oak Studio Soft Dining Chair",
-    "slug": "oak-studio-soft-dining-chair",
-    "image": "/images/products/dining-chair/dining-chair-5.jpg",
-    "description": "Inspired by natural design, the Oak Studio Soft Dining Chair offers timeless aesthetics and excellent functionality.",
-    "price": 6310,
-    "old_price": 0,
-    "sku": "DCH-OAK-0016",
-    "category": {
-      "id": "cat_002",
-      "name": "Chair",
-      "slug": "chair",
-      "icon": "rocking-chair"
-    },
-    "brand": {
-      "id": "br_005",
-      "name": "Oak Studio",
-      "slug": "oak-studio",
-      "country": "Canada",
-      "description": "Natural oak furniture.",
-      "style": "Natural",
-      "priceMultiplier": 0.9,
-      "preferredMaterials": [
-        "oak",
-        "maple",
-        "wool"
-      ],
-      "preferredColors": [
-        "natural",
-        "taupe",
-        "sage"
-      ]
-    },
-    "label": "sale",
-    "stock": 17,
-    "inStock": true,
-    "colors": [
-      "Gray"
-    ],
-    "materials": [
-      "Fabric"
-    ],
-    "size": "56×97×48 cm",
-    "weight": 4
-  },
-  {
-    "name": "Oak Studio Work Desk",
-    "slug": "oak-studio-work-desk",
-    "image": "/images/products/desk/desk-7.jpg",
-    "description": "The Oak Studio Work Desk is crafted from premium MDF in Oak color. Designed for modern interiors and everyday comfort.",
-    "price": 6570,
-    "old_price": 0,
-    "sku": "DSK-OAK-0017",
+    "id": "46e9a5a4-071c-4309-8868-17a05493b02f",
+    "name": "Nordic Living Work Desk",
+    "slug": "nordic-living-work-desk",
+    "image": "/images/products/desk/desk-2.jpg",
+    "description": "Nordic Living presents the Work Desk, made from high-quality Wood with attention to every detail.",
+    "price": 9710,
+    "old_price": 11652,
+    "sku": "DSK-NOR-0017",
     "category": {
       "id": "cat_006",
       "name": "Office",
       "slug": "office",
       "icon": "lamp-desk"
-    },
-    "brand": {
-      "id": "br_005",
-      "name": "Oak Studio",
-      "slug": "oak-studio",
-      "country": "Canada",
-      "description": "Natural oak furniture.",
-      "style": "Natural",
-      "priceMultiplier": 0.9,
-      "preferredMaterials": [
-        "oak",
-        "maple",
-        "wool"
-      ],
-      "preferredColors": [
-        "natural",
-        "taupe",
-        "sage"
-      ]
-    },
-    "label": "",
-    "stock": 17,
-    "inStock": true,
-    "colors": [
-      "Oak"
-    ],
-    "materials": [
-      "MDF"
-    ],
-    "size": "125×76×74 cm",
-    "weight": 22
-  },
-  {
-    "name": "WoodCraft Flex Office Chair",
-    "slug": "woodcraft-flex-office-chair",
-    "image": "/images/products/office-chair/office-chair-2.jpg",
-    "description": "WoodCraft presents the Flex Office Chair, made from high-quality Mesh with attention to every detail.",
-    "price": 12710,
-    "old_price": 15252,
-    "sku": "OCH-WOO-0018",
-    "category": {
-      "id": "cat_006",
-      "name": "Office",
-      "slug": "office",
-      "icon": "lamp-desk"
-    },
-    "brand": {
-      "id": "br_001",
-      "name": "WoodCraft",
-      "slug": "woodcraft",
-      "country": "Sweden",
-      "description": "Scandinavian wooden furniture.",
-      "style": "Scandinavian",
-      "priceMultiplier": 1,
-      "preferredMaterials": [
-        "oak",
-        "pine"
-      ],
-      "preferredColors": [
-        "beige",
-        "brown"
-      ]
-    },
-    "label": "exclusive",
-    "stock": 6,
-    "inStock": true,
-    "colors": [
-      "Gray"
-    ],
-    "materials": [
-      "Mesh"
-    ],
-    "size": "63×125×60 cm",
-    "weight": 19
-  },
-  {
-    "name": "Oak Studio Bergen Sofa",
-    "slug": "oak-studio-bergen-sofa",
-    "image": "/images/products/sofa/sofa-10.jpg",
-    "description": "Oak Studio presents the Bergen Sofa, made from high-quality Leather with attention to every detail.",
-    "price": 20410,
-    "old_price": 24492,
-    "sku": "SOF-OAK-0019",
-    "category": {
-      "id": "cat_001",
-      "name": "Sofa",
-      "slug": "sofa",
-      "icon": "sofa"
-    },
-    "brand": {
-      "id": "br_005",
-      "name": "Oak Studio",
-      "slug": "oak-studio",
-      "country": "Canada",
-      "description": "Natural oak furniture.",
-      "style": "Natural",
-      "priceMultiplier": 0.9,
-      "preferredMaterials": [
-        "oak",
-        "maple",
-        "wool"
-      ],
-      "preferredColors": [
-        "natural",
-        "taupe",
-        "sage"
-      ]
-    },
-    "label": "",
-    "stock": 20,
-    "inStock": true,
-    "colors": [
-      "Dark Blue"
-    ],
-    "materials": [
-      "Leather"
-    ],
-    "size": "186×79×89 cm",
-    "weight": 39
-  },
-  {
-    "name": "Nordic Living Solid Coffee Table",
-    "slug": "nordic-living-solid-coffee-table",
-    "image": "/images/products/coffee-table/coffee-table-2.jpg",
-    "description": "Inspired by minimalist design, the Nordic Living Solid Coffee Table offers timeless aesthetics and excellent functionality.",
-    "price": 5380,
-    "old_price": 0,
-    "sku": "CTB-NOR-0020",
-    "category": {
-      "id": "cat_003",
-      "name": "Table",
-      "slug": "table",
-      "icon": "table"
     },
     "brand": {
       "id": "br_002",
@@ -883,53 +764,7 @@
       ]
     },
     "label": "",
-    "stock": 4,
-    "inStock": true,
-    "colors": [
-      "Oak",
-      "Walnut"
-    ],
-    "materials": [
-      "Wood"
-    ],
-    "size": "87×37×76 cm",
-    "weight": 13
-  },
-  {
-    "name": "Loft Design Compact TV Stand",
-    "slug": "loft-design-compact-tv-stand",
-    "image": "/images/products/tv-stand/tv-stand-1.jpg",
-    "description": "Inspired by loft design, the Loft Design Compact TV Stand offers timeless aesthetics and excellent functionality.",
-    "price": 10650,
-    "old_price": 12780,
-    "sku": "TVS-LOF-0021",
-    "category": {
-      "id": "cat_003",
-      "name": "Table",
-      "slug": "table",
-      "icon": "table"
-    },
-    "brand": {
-      "id": "br_007",
-      "name": "Loft Design",
-      "slug": "loft-design",
-      "country": "USA",
-      "description": "Furniture inspired by loft interiors.",
-      "style": "Loft",
-      "priceMultiplier": 1.1,
-      "preferredMaterials": [
-        "steel",
-        "concrete",
-        "walnut"
-      ],
-      "preferredColors": [
-        "black",
-        "gray",
-        "mustard"
-      ]
-    },
-    "label": "",
-    "stock": 19,
+    "stock": 7,
     "inStock": true,
     "colors": [
       "Oak"
@@ -937,17 +772,203 @@
     "materials": [
       "Wood"
     ],
-    "size": "144×67×35 cm",
-    "weight": 25
+    "size": "128×76×78 cm",
+    "weight": 21
   },
   {
-    "name": "WoodCraft Royal Bed",
-    "slug": "woodcraft-royal-bed",
-    "image": "/images/products/bed/bed-7.jpg",
-    "description": "WoodCraft presents the Royal Bed, made from high-quality Leather with attention to every detail.",
-    "price": 19890,
-    "old_price": 23868,
-    "sku": "BED-WOO-0022",
+    "id": "9995c92e-b45f-4c29-bb64-00cf5ccb0131",
+    "name": "Modern Line Comfort Office Chair",
+    "slug": "modern-line-comfort-office-chair",
+    "image": "/images/products/office-chair/office-chair-2.jpg",
+    "description": "Modern Line presents the Comfort Office Chair, made from high-quality Leather with attention to every detail.",
+    "price": 9820,
+    "old_price": 0,
+    "sku": "OCH-MOD-0018",
+    "category": {
+      "id": "cat_006",
+      "name": "Office",
+      "slug": "office",
+      "icon": "lamp-desk"
+    },
+    "brand": {
+      "id": "br_004",
+      "name": "Modern Line",
+      "slug": "modern-line",
+      "country": "Italy",
+      "description": "Premium Italian furniture.",
+      "style": "Modern",
+      "priceMultiplier": 1.5,
+      "preferredMaterials": [
+        "walnut",
+        "chrome",
+        "velvet"
+      ],
+      "preferredColors": [
+        "cream",
+        "black",
+        "terracotta"
+      ]
+    },
+    "label": "",
+    "stock": 9,
+    "inStock": true,
+    "colors": [
+      "Black",
+      "White"
+    ],
+    "materials": [
+      "Leather"
+    ],
+    "size": "59×119×65 cm",
+    "weight": 10
+  },
+  {
+    "id": "026bb350-2ab5-4cf5-b619-eebc2202aab5",
+    "name": "Urban Home Nord Sofa",
+    "slug": "urban-home-nord-sofa",
+    "image": "/images/products/sofa/sofa-10.jpg",
+    "description": "Urban Home presents the Nord Sofa, made from high-quality Velvet with attention to every detail.",
+    "price": 48840,
+    "old_price": 0,
+    "sku": "SOF-URB-0019",
+    "category": {
+      "id": "cat_001",
+      "name": "Sofa",
+      "slug": "sofa",
+      "icon": "sofa"
+    },
+    "brand": {
+      "id": "br_003",
+      "name": "Urban Home",
+      "slug": "urban-home",
+      "country": "Germany",
+      "description": "Modern furniture with industrial style.",
+      "style": "Industrial",
+      "priceMultiplier": 1.2,
+      "preferredMaterials": [
+        "steel",
+        "wood",
+        "leather"
+      ],
+      "preferredColors": [
+        "black",
+        "charcoal",
+        "gray"
+      ]
+    },
+    "label": "sale",
+    "stock": 10,
+    "inStock": true,
+    "colors": [
+      "Beige"
+    ],
+    "materials": [
+      "Velvet"
+    ],
+    "size": "233×86×104 cm",
+    "weight": 56
+  },
+  {
+    "id": "061b3c0b-5c98-4df6-a5f3-028db6a8bb9f",
+    "name": "Modern Line Solid Coffee Table",
+    "slug": "modern-line-solid-coffee-table",
+    "image": "/images/products/coffee-table/coffee-table-10.jpg",
+    "description": "Inspired by modern design, the Modern Line Solid Coffee Table offers timeless aesthetics and excellent functionality.",
+    "price": 9340,
+    "old_price": 0,
+    "sku": "CTB-MOD-0020",
+    "category": {
+      "id": "cat_003",
+      "name": "Table",
+      "slug": "table",
+      "icon": "table"
+    },
+    "brand": {
+      "id": "br_004",
+      "name": "Modern Line",
+      "slug": "modern-line",
+      "country": "Italy",
+      "description": "Premium Italian furniture.",
+      "style": "Modern",
+      "priceMultiplier": 1.5,
+      "preferredMaterials": [
+        "walnut",
+        "chrome",
+        "velvet"
+      ],
+      "preferredColors": [
+        "cream",
+        "black",
+        "terracotta"
+      ]
+    },
+    "label": "",
+    "stock": 8,
+    "inStock": true,
+    "colors": [
+      "White"
+    ],
+    "materials": [
+      "Wood"
+    ],
+    "size": "120×42×68 cm",
+    "weight": 18
+  },
+  {
+    "id": "e0a493df-06f8-473d-818e-fef72deccb4a",
+    "name": "Modern Line Vision TV Stand",
+    "slug": "modern-line-vision-tv-stand",
+    "image": "/images/products/tv-stand/tv-stand-4.jpg",
+    "description": "Modern Line presents the Vision TV Stand, made from high-quality Metal with attention to every detail.",
+    "price": 16580,
+    "old_price": 0,
+    "sku": "TVS-MOD-0021",
+    "category": {
+      "id": "cat_003",
+      "name": "Table",
+      "slug": "table",
+      "icon": "table"
+    },
+    "brand": {
+      "id": "br_004",
+      "name": "Modern Line",
+      "slug": "modern-line",
+      "country": "Italy",
+      "description": "Premium Italian furniture.",
+      "style": "Modern",
+      "priceMultiplier": 1.5,
+      "preferredMaterials": [
+        "walnut",
+        "chrome",
+        "velvet"
+      ],
+      "preferredColors": [
+        "cream",
+        "black",
+        "terracotta"
+      ]
+    },
+    "label": "sale",
+    "stock": 14,
+    "inStock": true,
+    "colors": [
+      "Oak"
+    ],
+    "materials": [
+      "Metal"
+    ],
+    "size": "214×67×42 cm",
+    "weight": 24
+  },
+  {
+    "id": "ac188a69-6ce5-4374-8220-bf3bd346ccec",
+    "name": "Oak Studio Comfort Bed",
+    "slug": "oak-studio-comfort-bed",
+    "image": "/images/products/bed/bed-1.jpg",
+    "description": "Oak Studio presents the Comfort Bed, made from high-quality Fabric with attention to every detail.",
+    "price": 22970,
+    "old_price": 0,
+    "sku": "BED-OAK-0022",
     "category": {
       "id": "cat_004",
       "name": "Bedroom",
@@ -955,47 +976,97 @@
       "icon": "bed"
     },
     "brand": {
-      "id": "br_001",
-      "name": "WoodCraft",
-      "slug": "woodcraft",
-      "country": "Sweden",
-      "description": "Scandinavian wooden furniture.",
-      "style": "Scandinavian",
-      "priceMultiplier": 1,
+      "id": "br_005",
+      "name": "Oak Studio",
+      "slug": "oak-studio",
+      "country": "Canada",
+      "description": "Natural oak furniture.",
+      "style": "Natural",
+      "priceMultiplier": 0.9,
       "preferredMaterials": [
         "oak",
-        "pine"
+        "maple",
+        "wool"
       ],
       "preferredColors": [
-        "beige",
-        "brown"
+        "natural",
+        "taupe",
+        "sage"
       ]
     },
-    "label": "sale",
-    "stock": 19,
+    "label": "new",
+    "stock": 6,
     "inStock": true,
     "colors": [
-      "Beige"
+      "White",
+      "Gray"
     ],
     "materials": [
-      "Leather"
+      "Fabric"
     ],
-    "size": "183×132×200 cm",
-    "weight": 51
+    "size": "178×102×201 cm",
+    "weight": 63
   },
   {
-    "name": "WoodCraft Modern Wardrobe",
-    "slug": "woodcraft-modern-wardrobe",
-    "image": "/images/products/wardrobe/wardrobe-2.jpg",
-    "description": "The WoodCraft Modern Wardrobe is crafted from premium Wood in Oak color. Designed for modern interiors and everyday comfort.",
-    "price": 14930,
-    "old_price": 0,
-    "sku": "WRD-WOO-0023",
+    "id": "6ada435d-3f93-4780-bcd0-ebda5a79fafa",
+    "name": "Oak Studio Classic Wardrobe",
+    "slug": "oak-studio-classic-wardrobe",
+    "image": "/images/products/wardrobe/wardrobe-5.jpg",
+    "description": "The Oak Studio Classic Wardrobe is crafted from premium MDF in Oak color. Designed for modern interiors and everyday comfort.",
+    "price": 31580,
+    "old_price": 37896,
+    "sku": "WRD-OAK-0023",
     "category": {
       "id": "cat_004",
       "name": "Bedroom",
       "slug": "bedroom",
       "icon": "bed"
+    },
+    "brand": {
+      "id": "br_005",
+      "name": "Oak Studio",
+      "slug": "oak-studio",
+      "country": "Canada",
+      "description": "Natural oak furniture.",
+      "style": "Natural",
+      "priceMultiplier": 0.9,
+      "preferredMaterials": [
+        "oak",
+        "maple",
+        "wool"
+      ],
+      "preferredColors": [
+        "natural",
+        "taupe",
+        "sage"
+      ]
+    },
+    "label": "",
+    "stock": 1,
+    "inStock": true,
+    "colors": [
+      "Oak"
+    ],
+    "materials": [
+      "MDF"
+    ],
+    "size": "142×210×58 cm",
+    "weight": 64
+  },
+  {
+    "id": "b7999e70-8b95-4c59-9f19-7e14f9e58791",
+    "name": "WoodCraft Stone Dining Table",
+    "slug": "woodcraft-stone-dining-table",
+    "image": "/images/products/dining-table/dining-table-2.jpg",
+    "description": "Inspired by scandinavian design, the WoodCraft Stone Dining Table offers timeless aesthetics and excellent functionality.",
+    "price": 17680,
+    "old_price": 0,
+    "sku": "DTB-WOO-0024",
+    "category": {
+      "id": "cat_003",
+      "name": "Table",
+      "slug": "table",
+      "icon": "table"
     },
     "brand": {
       "id": "br_001",
@@ -1015,70 +1086,27 @@
       ]
     },
     "label": "new",
-    "stock": 15,
+    "stock": 7,
     "inStock": true,
     "colors": [
-      "Oak"
-    ],
-    "materials": [
-      "Wood"
-    ],
-    "size": "231×205×50 cm",
-    "weight": 127
-  },
-  {
-    "name": "Urban Home Prime Dining Table",
-    "slug": "urban-home-prime-dining-table",
-    "image": "/images/products/dining-table/dining-table-3.jpg",
-    "description": "Urban Home presents the Prime Dining Table, made from high-quality Glass with attention to every detail.",
-    "price": 21620,
-    "old_price": 0,
-    "sku": "DTB-URB-0024",
-    "category": {
-      "id": "cat_003",
-      "name": "Table",
-      "slug": "table",
-      "icon": "table"
-    },
-    "brand": {
-      "id": "br_003",
-      "name": "Urban Home",
-      "slug": "urban-home",
-      "country": "Germany",
-      "description": "Modern furniture with industrial style.",
-      "style": "Industrial",
-      "priceMultiplier": 1.2,
-      "preferredMaterials": [
-        "steel",
-        "wood",
-        "leather"
-      ],
-      "preferredColors": [
-        "black",
-        "charcoal",
-        "gray"
-      ]
-    },
-    "label": "sale",
-    "stock": 17,
-    "inStock": true,
-    "colors": [
+      "Black",
       "White"
     ],
     "materials": [
       "Glass"
     ],
-    "size": "130×76×81 cm",
-    "weight": 33
+    "size": "185×77×80 cm",
+    "weight": 43
   },
   {
-    "name": "Urban Home Soft Dining Chair",
-    "slug": "urban-home-soft-dining-chair",
+    "id": "b0ff1b31-e97b-4797-84d3-4cd2a918b4e9",
+    "name": "Modern Line Urban Dining Chair",
+    "slug": "modern-line-urban-dining-chair",
     "image": "/images/products/dining-chair/dining-chair-2.jpg",
-    "description": "Inspired by industrial design, the Urban Home Soft Dining Chair offers timeless aesthetics and excellent functionality.",
-    "price": 3030,
+    "description": "Inspired by modern design, the Modern Line Urban Dining Chair offers timeless aesthetics and excellent functionality.",
+    "price": 8910,
     "old_price": 0,
-    "sku": "DCH-URB-0025",
+    "sku": "DCH-MOD-0025",
     "category": {
       "id": "cat_002",
       "name": "Chair",
@@ -1086,44 +1114,45 @@
       "icon": "rocking-chair"
     },
     "brand": {
-      "id": "br_003",
-      "name": "Urban Home",
-      "slug": "urban-home",
-      "country": "Germany",
-      "description": "Modern furniture with industrial style.",
-      "style": "Industrial",
-      "priceMultiplier": 1.2,
+      "id": "br_004",
+      "name": "Modern Line",
+      "slug": "modern-line",
+      "country": "Italy",
+      "description": "Premium Italian furniture.",
+      "style": "Modern",
+      "priceMultiplier": 1.5,
       "preferredMaterials": [
-        "steel",
-        "wood",
-        "leather"
+        "walnut",
+        "chrome",
+        "velvet"
       ],
       "preferredColors": [
+        "cream",
         "black",
-        "charcoal",
-        "gray"
+        "terracotta"
       ]
     },
-    "label": "hit",
-    "stock": 19,
-    "inStock": true,
+    "label": "",
+    "stock": 0,
+    "inStock": false,
     "colors": [
-      "Gray"
+      "Beige"
     ],
     "materials": [
       "Wood"
     ],
-    "size": "45×84×45 cm",
+    "size": "44×82×48 cm",
     "weight": 6
   },
   {
-    "name": "Scandi House Focus Desk",
-    "slug": "scandi-house-focus-desk",
-    "image": "/images/products/desk/desk-3.jpg",
-    "description": "The Scandi House Focus Desk is crafted from premium Metal in Black color. Designed for modern interiors and everyday comfort.",
-    "price": 5170,
+    "id": "6e94b19d-6570-4861-8eeb-7427287011d4",
+    "name": "WoodCraft Pro Desk",
+    "slug": "woodcraft-pro-desk",
+    "image": "/images/products/desk/desk-5.jpg",
+    "description": "Inspired by scandinavian design, the WoodCraft Pro Desk offers timeless aesthetics and excellent functionality.",
+    "price": 13690,
     "old_price": 0,
-    "sku": "DSK-SCA-0026",
+    "sku": "DSK-WOO-0026",
     "category": {
       "id": "cat_006",
       "name": "Office",
@@ -1131,68 +1160,20 @@
       "icon": "lamp-desk"
     },
     "brand": {
-      "id": "br_008",
-      "name": "Scandi House",
-      "slug": "scandi-house",
-      "country": "Finland",
-      "description": "Comfortable Scandinavian furniture.",
+      "id": "br_001",
+      "name": "WoodCraft",
+      "slug": "woodcraft",
+      "country": "Sweden",
+      "description": "Scandinavian wooden furniture.",
       "style": "Scandinavian",
       "priceMultiplier": 1,
       "preferredMaterials": [
-        "pine",
-        "birch",
-        "wool"
-      ],
-      "preferredColors": [
-        "white",
-        "soft-gray",
-        "dusty-blue"
-      ]
-    },
-    "label": "",
-    "stock": 8,
-    "inStock": true,
-    "colors": [
-      "Black",
-      "Oak"
-    ],
-    "materials": [
-      "Metal"
-    ],
-    "size": "161×72×66 cm",
-    "weight": 21
-  },
-  {
-    "name": "Oak Studio Motion Office Chair",
-    "slug": "oak-studio-motion-office-chair",
-    "image": "/images/products/office-chair/office-chair-2.jpg",
-    "description": "Oak Studio presents the Motion Office Chair, made from high-quality Fabric with attention to every detail.",
-    "price": 5590,
-    "old_price": 6708,
-    "sku": "OCH-OAK-0027",
-    "category": {
-      "id": "cat_006",
-      "name": "Office",
-      "slug": "office",
-      "icon": "lamp-desk"
-    },
-    "brand": {
-      "id": "br_005",
-      "name": "Oak Studio",
-      "slug": "oak-studio",
-      "country": "Canada",
-      "description": "Natural oak furniture.",
-      "style": "Natural",
-      "priceMultiplier": 0.9,
-      "preferredMaterials": [
         "oak",
-        "maple",
-        "wool"
+        "pine"
       ],
       "preferredColors": [
-        "natural",
-        "taupe",
-        "sage"
+        "beige",
+        "brown"
       ]
     },
     "label": "hit",
@@ -1202,19 +1183,64 @@
       "Gray"
     ],
     "materials": [
-      "Fabric"
+      "Wood"
     ],
-    "size": "59×119×63 cm",
-    "weight": 7
+    "size": "179×76×72 cm",
+    "weight": 42
   },
   {
-    "name": "Oak Studio Oslo Sofa",
-    "slug": "oak-studio-oslo-sofa",
-    "image": "/images/products/sofa/sofa-7.jpg",
-    "description": "Inspired by natural design, the Oak Studio Oslo Sofa offers timeless aesthetics and excellent functionality.",
-    "price": 24540,
-    "old_price": 29448,
-    "sku": "SOF-OAK-0028",
+    "id": "f500e50d-2d36-448c-a2b5-60137fe92883",
+    "name": "WoodCraft Comfort Office Chair",
+    "slug": "woodcraft-comfort-office-chair",
+    "image": "/images/products/office-chair/office-chair-1.jpg",
+    "description": "Inspired by scandinavian design, the WoodCraft Comfort Office Chair offers timeless aesthetics and excellent functionality.",
+    "price": 6390,
+    "old_price": 7668,
+    "sku": "OCH-WOO-0027",
+    "category": {
+      "id": "cat_006",
+      "name": "Office",
+      "slug": "office",
+      "icon": "lamp-desk"
+    },
+    "brand": {
+      "id": "br_001",
+      "name": "WoodCraft",
+      "slug": "woodcraft",
+      "country": "Sweden",
+      "description": "Scandinavian wooden furniture.",
+      "style": "Scandinavian",
+      "priceMultiplier": 1,
+      "preferredMaterials": [
+        "oak",
+        "pine"
+      ],
+      "preferredColors": [
+        "beige",
+        "brown"
+      ]
+    },
+    "label": "sale",
+    "stock": 17,
+    "inStock": true,
+    "colors": [
+      "Black"
+    ],
+    "materials": [
+      "Mesh"
+    ],
+    "size": "60×111×66 cm",
+    "weight": 8
+  },
+  {
+    "id": "f69d50b6-1052-4407-b9ff-1ffadac155b9",
+    "name": "WoodCraft Prime Sofa",
+    "slug": "woodcraft-prime-sofa",
+    "image": "/images/products/sofa/sofa-9.jpg",
+    "description": "WoodCraft presents the Prime Sofa, made from high-quality Velvet with attention to every detail.",
+    "price": 34760,
+    "old_price": 0,
+    "sku": "SOF-WOO-0028",
     "category": {
       "id": "cat_001",
       "name": "Sofa",
@@ -1222,45 +1248,44 @@
       "icon": "sofa"
     },
     "brand": {
-      "id": "br_005",
-      "name": "Oak Studio",
-      "slug": "oak-studio",
-      "country": "Canada",
-      "description": "Natural oak furniture.",
-      "style": "Natural",
-      "priceMultiplier": 0.9,
+      "id": "br_001",
+      "name": "WoodCraft",
+      "slug": "woodcraft",
+      "country": "Sweden",
+      "description": "Scandinavian wooden furniture.",
+      "style": "Scandinavian",
+      "priceMultiplier": 1,
       "preferredMaterials": [
         "oak",
-        "maple",
-        "wool"
+        "pine"
       ],
       "preferredColors": [
-        "natural",
-        "taupe",
-        "sage"
+        "beige",
+        "brown"
       ]
     },
-    "label": "",
-    "stock": 9,
+    "label": "sale",
+    "stock": 11,
     "inStock": true,
     "colors": [
-      "Beige",
-      "Cream"
+      "Brown",
+      "Green"
     ],
     "materials": [
-      "Fabric"
+      "Velvet"
     ],
-    "size": "204×90×110 cm",
-    "weight": 56
+    "size": "236×85×92 cm",
+    "weight": 59
   },
   {
-    "name": "Nordic Living Solid Coffee Table",
-    "slug": "nordic-living-solid-coffee-table",
+    "id": "0e8e7d69-0ce9-40cc-a081-7ddd579777ae",
+    "name": "Scandi House Flow Coffee Table",
+    "slug": "scandi-house-flow-coffee-table",
     "image": "/images/products/coffee-table/coffee-table-9.jpg",
-    "description": "Nordic Living presents the Solid Coffee Table, made from high-quality Metal with attention to every detail.",
-    "price": 6310,
+    "description": "Inspired by scandinavian design, the Scandi House Flow Coffee Table offers timeless aesthetics and excellent functionality.",
+    "price": 11780,
     "old_price": 0,
-    "sku": "CTB-NOR-0029",
+    "sku": "CTB-SCA-0029",
     "category": {
       "id": "cat_003",
       "name": "Table",
@@ -1268,79 +1293,80 @@
       "icon": "table"
     },
     "brand": {
-      "id": "br_002",
-      "name": "Nordic Living",
-      "slug": "nordic-living",
-      "country": "Denmark",
-      "description": "Minimalist furniture for modern homes.",
-      "style": "Minimalist",
-      "priceMultiplier": 0.8,
+      "id": "br_008",
+      "name": "Scandi House",
+      "slug": "scandi-house",
+      "country": "Finland",
+      "description": "Comfortable Scandinavian furniture.",
+      "style": "Scandinavian",
+      "priceMultiplier": 1,
       "preferredMaterials": [
+        "pine",
         "birch",
-        "ash",
-        "linen"
+        "wool"
       ],
       "preferredColors": [
         "white",
-        "gray",
-        "sand"
+        "soft-gray",
+        "dusty-blue"
       ]
     },
-    "label": "",
-    "stock": 1,
+    "label": "hit",
+    "stock": 18,
+    "inStock": true,
+    "colors": [
+      "White"
+    ],
+    "materials": [
+      "Glass"
+    ],
+    "size": "79×44×60 cm",
+    "weight": 9
+  },
+  {
+    "id": "cfa910d1-534c-45a3-855c-27448b765370",
+    "name": "Urban Home Compact TV Stand",
+    "slug": "urban-home-compact-tv-stand",
+    "image": "/images/products/tv-stand/tv-stand-1.jpg",
+    "description": "Urban Home presents the Compact TV Stand, made from high-quality MDF with attention to every detail.",
+    "price": 21030,
+    "old_price": 0,
+    "sku": "TVS-URB-0030",
+    "category": {
+      "id": "cat_003",
+      "name": "Table",
+      "slug": "table",
+      "icon": "table"
+    },
+    "brand": {
+      "id": "br_003",
+      "name": "Urban Home",
+      "slug": "urban-home",
+      "country": "Germany",
+      "description": "Modern furniture with industrial style.",
+      "style": "Industrial",
+      "priceMultiplier": 1.2,
+      "preferredMaterials": [
+        "steel",
+        "wood",
+        "leather"
+      ],
+      "preferredColors": [
+        "black",
+        "charcoal",
+        "gray"
+      ]
+    },
+    "label": "hit",
+    "stock": 6,
     "inStock": true,
     "colors": [
       "Black"
     ],
     "materials": [
-      "Metal"
-    ],
-    "size": "75×41×67 cm",
-    "weight": 15
-  },
-  {
-    "name": "Nordic Living Compact TV Stand",
-    "slug": "nordic-living-compact-tv-stand",
-    "image": "/images/products/tv-stand/tv-stand-1.jpg",
-    "description": "The Nordic Living Compact TV Stand is crafted from premium MDF in Walnut color. Designed for modern interiors and everyday comfort.",
-    "price": 5270,
-    "old_price": 6324,
-    "sku": "TVS-NOR-0030",
-    "category": {
-      "id": "cat_003",
-      "name": "Table",
-      "slug": "table",
-      "icon": "table"
-    },
-    "brand": {
-      "id": "br_002",
-      "name": "Nordic Living",
-      "slug": "nordic-living",
-      "country": "Denmark",
-      "description": "Minimalist furniture for modern homes.",
-      "style": "Minimalist",
-      "priceMultiplier": 0.8,
-      "preferredMaterials": [
-        "birch",
-        "ash",
-        "linen"
-      ],
-      "preferredColors": [
-        "white",
-        "gray",
-        "sand"
-      ]
-    },
-    "label": "hit",
-    "stock": 13,
-    "inStock": true,
-    "colors": [
-      "Walnut"
-    ],
-    "materials": [
       "MDF"
     ],
-    "size": "206×66×35 cm",
-    "weight": 29
+    "size": "187×68×43 cm",
+    "weight": 15
   }
 ]

@@ -6,13 +6,13 @@ import { ShoppingCart, Check } from 'lucide-react';
 
 export const AddToCartButton = ({ product }: { product: Product }) => {
     const { addItem, items } = useCartStore();
-    const inCart = items.some(item => item.sku === product.sku);
+    const inCart = items.some(item => item.id === product.id);
 
     return (
         <button
             disabled={inCart}
             onClick={() => addItem({
-                sku: product.sku,
+                id: product.id,
                 name: product.name,
                 price: product.price,
                 image: product.image,

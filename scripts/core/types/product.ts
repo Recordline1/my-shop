@@ -1,6 +1,7 @@
 import {Category} from "./category";
 import {Brand} from "./brand";
 export interface Product {
+  id: string;
   name: string;
   slug: string;
   image?: string;

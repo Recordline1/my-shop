@@ -43,7 +43,7 @@ export const MobileFiltersDrawer = ({
 
     return (
         <div
-            className="fixed inset-0 z-50 bg-black/50 flex justify-end md:hidden"
+            className="fixed inset-0 z-50 bg-black/50 flex  md:hidden"
             onClick={onClose}
             role="dialog"
             aria-modal="true"

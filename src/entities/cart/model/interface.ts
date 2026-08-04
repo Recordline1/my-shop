@@ -1,7 +1,6 @@
 // Interface definition for the slice entities/cart
-import { Product } from "@shared/types/product";
 export type CartItem  = {
-  sku: string;
+  id: string;
   name: string;
   price: number;
   quantity: number;
@@ -11,8 +10,8 @@ export type CartItem  = {
 export type CartStore = {
   items: CartItem[];
   addItem: (item: Omit<CartItem, 'quantity'>) => void;
-  removeItem: (sku: string) => void;
+  removeItem: (id: string) => void;
   clearCart: () => void;
-  updateQuantity: (sku: string, quantity: number) => void;
+  updateQuantity: (id: string, quantity: number) => void;
   getTotalPrice: () => number;
 };

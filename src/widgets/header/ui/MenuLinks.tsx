@@ -14,12 +14,12 @@ export const MenuLinks = () => {
     ]
 
     return (
-        <div className="max-w-6xl mx-auto hidden md:flex text-lg font-medium  flex items-center gap-4 h-10 px-4 bg-gray-100 ">
+        <div className=" backdrop-blur-md hidden md:flex text-lg font-medium  flex items-center gap-4 h-10 px-4 bg-gray-100/80 ">
             {links.map((link) => (
                 <Link
                     key={link.href}
                     href={link.href}
-                    className="text-md text-gray-600 hover:text-amber-600 transition-colors"
+                    className="text-md font-bold text-gray-600 hover:text-amber-600 transition-colors"
                 >
                     {link.label}
                 </Link>

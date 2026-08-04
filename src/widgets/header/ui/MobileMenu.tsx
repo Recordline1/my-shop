@@ -4,7 +4,9 @@ import { User, LogOut, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useAuth } from '@shared/lib/AuthContext'
 import { CatalogIcon } from '@shared/icons/CatalogIcon'
 import { categoryIcons } from '@entities/categories/model/categoryIcons'
-import { getCategories } from '@entities/categories/api/getCategories'
+// import { getCategories } from '@entities/categories/api/getCategories'
+import { getCategories } from "@shared/api/categories/get-categories";
+import {Category} from "@shared/types/category";
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -17,7 +19,7 @@ export const MobileMenu = ({ gradient, onClose }: MobileMenuProps) => {
     const { user, logout } = useAuth()
     const router = useRouter()
     const [menuLevel, setMenuLevel] = useState<'main' | 'catalog'>('main')
-    const [categories, setCategories] = useState<any[]>([])
+    const [categories, setCategories] = useState<Category[]>([])
 
     useEffect(() => {
         getCategories().then(setCategories)
@@ -105,7 +107,7 @@ export const MobileMenu = ({ gradient, onClose }: MobileMenuProps) => {
                     {categories.map(category => (
                         <Link
                             key={category.id}
-                            href={`/?category=${category.slug}`}
+                            href={`/catalog?category=${category.slug}`}
                             onClick={handleClose}
                             className="flex items-center justify-between text-white hover:text-amber-400 hover:bg-white/5 transition-colors text-base py-4 px-2 rounded-lg border-b border-white/10"
                         >

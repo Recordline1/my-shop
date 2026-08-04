@@ -19,7 +19,7 @@ export const ProductGrid = ({ products }: { products: Product[] }) => {
     return (
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(220px,100%),1fr))] gap-6">
     {products.map((product) => (
-        <ProductCard key={product.sku} product={product} addItem={<AddToCartButton product={product} />} />
+        <ProductCard key={product.id} product={product} addItem={<AddToCartButton product={product} />} />
     ))}
 </div>
     )

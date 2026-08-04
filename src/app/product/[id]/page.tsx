@@ -7,16 +7,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 
-export default async function ProductPage({ params }: { params: Promise<{ sku: string }> }) {
-  const { sku } = await params
-  const product = await getProduct(sku)
+export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const product = await getProduct(id)
 
   if (!product) {
     notFound();
   }
   return (
     <main className="max-w-4xl mx-auto p-8">
-      <Link href="/" className="flex gap-2 items-center text-cyan-600 mb-6 "><ArrowLeft /> Back to store</Link>
+      <Link href="/catalog" className="flex gap-2 items-center text-cyan-600 mb-6 "><ArrowLeft /> Back to store</Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="relative h-96 rounded-md overflow-hidden">

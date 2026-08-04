@@ -13,6 +13,7 @@ export const gradient = {
 export const Header = () => {
     const [mounted, setMounted] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
+    
 
     useEffect(() => setMounted(true), [])
     if (!mounted) return null

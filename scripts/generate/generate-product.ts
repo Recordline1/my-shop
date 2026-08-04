@@ -32,6 +32,8 @@ export function generateProduct(
 
 
     return {
+        id: crypto.randomUUID(),
+        
         name: identity.name,
 
         slug: generateSlug(identity.name),
@@ -50,8 +52,8 @@ export function generateProduct(
 
         label: generateLabel(),
 
-        stock:stock,
-        inStock:stock > 0,
+        stock: stock,
+        inStock: stock > 0,
 
         colors: identity.colors,
 
