@@ -48,7 +48,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
     return (
         <div style={gradient} className="border-b border-white/10 shadow-md">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
-                <Link href="/" className="text-xl font-bold tracking-widest uppercase text-white shrink-0">
+                <Link href="catalog" className="text-xl font-bold tracking-widest uppercase text-white shrink-0">
                     Furni
                 </Link>
 

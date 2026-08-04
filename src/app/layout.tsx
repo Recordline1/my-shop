@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from '@widgets/header/ui/Header';
-import {AuthProvider} from '@shared/lib/AuthContext';
+import { AuthProvider } from '@shared/lib/AuthContext';
 
 import "./globals.css";
 
@@ -22,19 +22,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full w-full  antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-      <AuthProvider>
-        <Header />
-        {children}
-      </AuthProvider>
+      <body className="min-h-full">
+        <AuthProvider>
+          <Header />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
