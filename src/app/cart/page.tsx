@@ -1,15 +1,16 @@
 'use client'
 
 import { useCartStore } from '@entities/cart/model/cartStore';
+import { Eraser } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImage } from "@shared/lib/images/get-product-image";
 import { ArrowLeft, Trash2, ChevronRight, ShoppingBag } from 'lucide-react';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function CartPage() {
     const [isMounted, setIsMounted] = useState(false);
-    const { items, removeItem, updateQuantity, getTotalPrice } = useCartStore()
+    const { items, removeItem, updateQuantity, getTotalPrice, clearCart } = useCartStore()
 
     useEffect(() => {
         setIsMounted(true);
@@ -58,6 +59,7 @@ export default function CartPage() {
                                 src={getProductImage(item)}
                                 alt={item.name}
                                 fill
+                                sizes="(max-width: 768px) 100vw, 20vw"
                                 className="object-cover"
                             />
                         </div>
@@ -102,6 +104,15 @@ export default function CartPage() {
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div className="flex justify-between items-center mb-4">
+                    <span className="text-gray-500">Clear cart</span>
+                    <button
+                        onClick={clearCart}
+                        className="cursor-pointer font-semibold text-red-500 hover:text-red-600 transition-colors"
+                    >
+                        <Eraser size={18} />
+                    </button>
+                </div>
                 <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-500">Subtotal</span>
                     <span className="font-semibold">${getTotalPrice().toLocaleString()}</span>

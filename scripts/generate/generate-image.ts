@@ -1,9 +1,24 @@
 import { ProductIdentity } from "../core/types/product-identity";
 
-export function generateImage(
-  identity: ProductIdentity,
-): string {
-  const imageIndex = Math.floor(Math.random() * 10) + 1;
+const GALLERY_SIZE = 4; 
+const POOL_SIZE = 10;   
 
-  return `/images/products/${identity.productType.slug}/${identity.productType.slug}-${imageIndex}.jpg`;
+function pickUniqueIndexes(count: number, max: number): number[] {
+  const pool = Array.from({ length: max }, (_, i) => i + 1); // [1..max]
+
+  // Fisher-Yates shuffle
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+  return pool.slice(0, count);
+}
+
+export function generateImages(identity: ProductIdentity): string[] {
+  const indexes = pickUniqueIndexes(GALLERY_SIZE, POOL_SIZE);
+
+  return indexes.map(
+    (i) => `/images/products/${identity.productType.slug}/${identity.productType.slug}-${i}.jpg`
+  );
 }

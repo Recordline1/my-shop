@@ -1,17 +1,17 @@
-import {Category} from "./category";
-import {Brand} from "./brand";
+import { Category } from "./category";
+import { Brand } from "./brand";
 export interface Product {
   id: string;
   name: string;
   slug: string;
   image?: string;
-
+  images: string[];
   description: string;
 
   price: number;
   old_price: number | null;
 
-   quantity?: number;
+  quantity?: number;
 
   sku: string;
 

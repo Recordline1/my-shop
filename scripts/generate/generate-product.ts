@@ -11,7 +11,7 @@ import { ProductTypeConfig } from '../core/types/product-type-config';
 import { Brand } from '../core/types/brand';
 import { generateProductIdentity } from './generate-product-identity';
 import { generatePrice } from './generate-price';
-import { generateImage } from "./generate-image";
+import { generateImages } from "./generate-image";
 export function generateProduct(
     productType: ProductTypeConfig,
     brand: Brand,
@@ -30,6 +30,8 @@ export function generateProduct(
 
     const stock = generateStock();
 
+    const images = generateImages(identity);
+
 
     return {
         id: crypto.randomUUID(),
@@ -38,7 +40,8 @@ export function generateProduct(
 
         slug: generateSlug(identity.name),
 
-        image: generateImage(identity),
+        image: images[0],
+        images,
 
         description: generateDescription(identity),
 
