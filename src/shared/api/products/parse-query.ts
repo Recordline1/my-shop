@@ -23,6 +23,7 @@ export function parseProductsQuery(
   const minPrice = getString(searchParams.minPrice)
   const maxPrice = getString(searchParams.maxPrice)
   const inStock = getString(searchParams.inStock)
+  const label = getString(searchParams.label)
   const sizes = Array.isArray(searchParams.sizes) ? searchParams.sizes : []
 
   return {
@@ -36,5 +37,6 @@ export function parseProductsQuery(
     sizes: sizes.length ? sizes : undefined,
     inStock: inStock === "true" ? true :
       inStock === "false" ? false : undefined,
+    label: label?.trim() || undefined,
   };
 }

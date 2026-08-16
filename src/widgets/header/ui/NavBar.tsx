@@ -55,7 +55,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                 <nav className="hidden md:flex items-center gap-4">
                     <button onClick={() => setCatalogOpen(s => !s)} className="flex items-center gap-2 border border-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-lg font-medium cursor-pointer">
                         <CatalogIcon className="w-4 h-4" />
-                        Catalog
+                        Сategories
                     </button>
                 </nav>
 

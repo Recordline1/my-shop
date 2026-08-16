@@ -4,7 +4,6 @@ import { User, LogOut, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useAuth } from '@shared/lib/AuthContext'
 import { CatalogIcon } from '@shared/icons/CatalogIcon'
 import { categoryIcons } from '@entities/categories/model/categoryIcons'
-// import { getCategories } from '@entities/categories/api/getCategories'
 import { getCategories } from "@shared/api/categories/get-categories";
 import {Category} from "@shared/types/category";
 import { useState, useEffect } from 'react'

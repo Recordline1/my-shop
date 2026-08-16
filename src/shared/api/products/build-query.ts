@@ -41,6 +41,12 @@ export function buildProductsQuery(
         params.set("brand", query.brand);
     }
 
+    if (query.label === undefined) {
+        params.delete("label");
+    } else {
+        params.set("label", String(query.label));
+    }
+
     if (query.minPrice === undefined) {
         params.delete("minPrice");
     } else {

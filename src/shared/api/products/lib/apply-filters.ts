@@ -7,6 +7,7 @@ import { filterByCategory } from "./filter-by-category";
 import { filterByBrand } from "./filter-by-brand";
 import { filterByPrice } from "./filter-by-price";
 import { filterByStock } from "./filter-by-stock";
+import { filterByLabel } from "./filter-by-label";
 
 export function applyFilters(
   products: Product[],
@@ -19,6 +20,8 @@ export function applyFilters(
   result = filterByCategory(result,options.category,);
 
   result = filterByBrand(result,options.brand,);
+
+  result = filterByLabel(result,options.label,);
 
   result = filterByStock(result,options.inStock,);
 

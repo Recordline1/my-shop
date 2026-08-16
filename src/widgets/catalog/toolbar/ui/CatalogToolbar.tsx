@@ -29,7 +29,7 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
         push({ sort: e.target.value as ProductSort })
     }
     return (
-        <div className="flex justify-between items-center mb-8 border-b border-b-gray-200 pb-4">
+        <div className="sticky top-[75px] md:top-[150px] z-10 bg-white/90 backidrop-blur flex justify-between items-center mb-8 border-b border-b-gray-200 p-4">
             <div className="flex items-center gap-2 md:hidden">
                 <span className="text-gray-400 font-bold">Filter:</span >
                 <button

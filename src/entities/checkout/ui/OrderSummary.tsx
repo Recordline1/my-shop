@@ -13,7 +13,7 @@ export const OrderSummary = ({ items, getTotalPrice }: { items: any[], getTotalP
                                 <div key={item.id} className="flex items-center gap-3">
                                     <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-gray-50 shrink-0">
                                         <Image
-                                            src={`https://pb.portfoliothe.pics/api/files/products/${item.id}/${item.image}`}
+                                            src={item.image}
                                             alt={item.name}
                                             fill
                                             className="object-cover"

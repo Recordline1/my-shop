@@ -82,11 +82,11 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               <div className="mb-4">
                 <p className="text-sm font-medium text-gray-700 mb-2">Колір</p>
                 <div className="flex gap-2">
-                  {product.colors.map((color) => (
+                  {product.colors.map( color => (
                     <span
                       key={color}
                       title={color}
-                      className="w-7 h-7 rounded-full border border-gray-200"
+                      className="w-7 h-7 rounded-full border border-gray-300 cursor-pointer"
                       style={{ backgroundColor: color }}
                     />
                   ))}

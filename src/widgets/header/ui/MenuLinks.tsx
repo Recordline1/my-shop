@@ -14,7 +14,7 @@ export const MenuLinks = () => {
     ]
 
     return (
-        <div className=" backdrop-blur-md hidden md:flex text-lg font-medium  flex items-center gap-4 h-10 px-4 bg-gray-100/80 ">
+        <div className=" max-w-6xl mx-auto backdrop-blur-md hidden md:flex text-lg font-medium  flex items-center gap-4 h-10 px-4 bg-gray-100/80 ">
             {links.map((link) => (
                 <Link
                     key={link.href}

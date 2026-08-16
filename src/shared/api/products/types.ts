@@ -33,6 +33,8 @@ export interface GetProductsOptions {
 
   search?: string;
 
+  label?: string;
+
   sort?: ProductSort;
 
   page?: number;
