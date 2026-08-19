@@ -1,6 +1,9 @@
+
 import Link from "next/link";
+import Image from "next/image";
 import { Category } from "@shared/types/category";
-import { categoryIcons } from "@/entities/categories/model/categoryIcons";
+import { CATEGORY_IMAGES } from "@shared/lib/images/categories-bg-image";
+import {getProductImage} from "@shared/lib/images/get-product-image";
 
 export const CategoryGrid = ({ categories }: { categories: Category[] }) => (
     <section className="mb-12">
@@ -10,12 +13,20 @@ export const CategoryGrid = ({ categories }: { categories: Category[] }) => (
                 <Link
                     key={category.id}
                     href={`/catalog?category=${category.slug}`}
-                    className="flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-100 bg-white p-6 text-center hover:border-amber-600 hover:shadow-sm transition-all"
+                    className="group relative h-40 rounded-xl overflow-hidden"
                 >
-                    <span className="text-amber-600">
-                        {categoryIcons[category.icon]}
+                    <Image
+                        src={getProductImage({image: CATEGORY_IMAGES[category.slug]})}
+                        alt={category.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 640px) 50vw, 25vw"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                    <span className="absolute bottom-3 left-4 text-white font-semibold text-lg">
+                        {category.name}
                     </span>
-                    <span className="text-sm font-medium text-gray-800">{category.name}</span>
                 </Link>
             ))}
         </div>

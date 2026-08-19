@@ -3,18 +3,22 @@ import { getCategories } from "@shared/api/categories/get-categories";
 import { HeroBannerSection } from "@widgets/home/ui/HeroBannerSection";
 import { CategoryGrid } from "@widgets/home/ui/CategoryGrid";
 import { ProductSection } from "@widgets/home/ui/ProductSection";
+import { BrandMarquee } from "@widgets/home/ui/BrandMarquee";
+import {getBrands} from "@shared/api/brands/get-brands";
 
 export default async function HomePage() {
-  const [newProducts, hitProducts, saleProducts, categories] = await Promise.all([
+  const [newProducts, hitProducts, saleProducts, categories, brands] = await Promise.all([
     getProducts({ label: "new", limit: 5 }),
     getProducts({ label: "hit", limit: 5 }),
     getProducts({ label: "sale", limit: 5 }),
     getCategories(),
+    getBrands(),
   ]);
 
   return (
     <main className="max-w-6xl mx-auto p-8">
       <HeroBannerSection />
+      <BrandMarquee brands={brands}  />
       <CategoryGrid categories={categories} />
       <ProductSection title="Новинки" viewAllHref="/catalog?label=new" products={newProducts.items} />
       <ProductSection title="Хіти продажів" viewAllHref="/catalog?label=hit" products={hitProducts.items} />
