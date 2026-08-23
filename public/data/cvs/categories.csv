@@ -1,8 +1,8 @@
-id,name,slug,icon
-"cat_001","Sofa","sofa","sofa"
-"cat_002","Chair","chair","rocking-chair"
-"cat_003","Table","table","table"
-"cat_004","Bedroom","bedroom","bed"
-"cat_005","Kitchen","kitchen","cooking-pot"
-"cat_006","Office","office","lamp-desk"
-"cat_007","Kids","kids","panda"
+id,name,slug,icon,image
+"cat_001","Sofa","sofa","sofa","/images/products/sofa/sofa-1.jpg"
+"cat_002","Chair","chair","rocking-chair","/images/products/dining-chair/dining-chair-1.jpg"
+"cat_003","Table","table","table","/images/products/dining-table/dining-table-1.jpg"
+"cat_004","Bedroom","bedroom","bed","/images/products/bedroom/bedroom-1.jpg"
+"cat_005","Kitchen","kitchen","cooking-pot","/images/products/kitchen/kitchen-1.jpg"
+"cat_006","Office","office","lamp-desk","/images/products/office-chair/office-chair-2.jpg"
+"cat_007","Kids","kids","panda","/images/products/kids/kids-1.jpg"

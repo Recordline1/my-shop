@@ -2,5 +2,6 @@ export interface Category {
   id: string;
   name: string;
   slug: string;
-  icon: string;  
+  icon: string; 
+  image: string; 
 }

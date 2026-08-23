@@ -3,4 +3,5 @@ export interface CategoryCsv {
   name: string;
   slug: string;
   icon: string;
+  image: string;
 }

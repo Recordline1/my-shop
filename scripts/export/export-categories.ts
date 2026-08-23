@@ -9,5 +9,6 @@ export function exportCategories(
     name: category.name,
     slug: category.slug,
     icon: category.icon,
+    image: category.image,
   }));
 }

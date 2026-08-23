@@ -2,8 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Category } from "@shared/types/category";
-import { CATEGORY_IMAGES } from "@shared/lib/images/categories-bg-image";
-import {getProductImage} from "@shared/lib/images/get-product-image";
 
 export const CategoryGrid = ({ categories }: { categories: Category[] }) => (
     <section className="mb-12">
@@ -16,7 +14,7 @@ export const CategoryGrid = ({ categories }: { categories: Category[] }) => (
                     className="group relative h-40 rounded-xl overflow-hidden"
                 >
                     <Image
-                        src={getProductImage({image: CATEGORY_IMAGES[category.slug]})}
+                        src={category.image ?? "/images/placeholders/no-image.jpg"}
                         alt={category.name}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
