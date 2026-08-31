@@ -4,7 +4,7 @@ import { ProductTypeConfig } from "../core/types/product-type-config";
 import { generateMaterial } from './generate-materials';
 import { generateColors } from './generate-colors';
 import { generateStock } from './generate-stock';
-import { Brand } from "../core/types/brand";
+import { BrandProfile } from "../core/types/brand-profile";
 
 const collections = [
     "Nord",
@@ -19,7 +19,7 @@ const collections = [
 
 export function generateProductIdentity(
     productType: ProductTypeConfig,
-    brand: Brand,
+    brand: BrandProfile,
     index: number
 ): ProductIdentity {
     const model = randomItem(productType.models);

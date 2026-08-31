@@ -1,8 +1,8 @@
-import { Brand } from "../types/brand";
+import { BrandProfile } from "../types/brand-profile";
 
-export const brands: Brand[] = [
+export const brands: BrandProfile[] = [
 {
-  id: "br_001",
+  id: "ex0s2a26z4831mk",
 
   name: "WoodCraft",
 
@@ -21,7 +21,7 @@ export const brands: Brand[] = [
   preferredColors: ["beige", "brown"],
 },
   {
-    id:'br_002',
+    id:'iutrl92llqlgm3g',
 
     name: "Nordic Living",
 
@@ -40,7 +40,7 @@ preferredMaterials: ["birch", "ash", "linen"],
     preferredColors: ["white", "gray", "sand"],
   },
   {
-    id:'br_003',
+    id:'tsms1tlzkfm7b3q',
 
     name: "Urban Home",
 
@@ -59,7 +59,7 @@ preferredMaterials: ["birch", "ash", "linen"],
     preferredColors: ["black", "charcoal", "gray"],
   },
   {
-    id:'br_004',
+    id:'p3lw7ul4zomuay3',
 
     name: "Modern Line",
 
@@ -78,7 +78,7 @@ preferredMaterials: ["birch", "ash", "linen"],
     preferredColors: ["cream", "black", "terracotta"],
   },
   {
-    id:'br_005',
+    id:'lxr94wnsnqqpsqe',
 
     name: "Oak Studio",
 
@@ -97,7 +97,7 @@ preferredMaterials: ["birch", "ash", "linen"],
     preferredColors: ["natural", "taupe", "sage"],
   },
   {
-    id:'br_006',
+    id:'52rxg9ibu1gs9vq',
 
     name: "Casa Nova",
 
@@ -116,7 +116,7 @@ preferredMaterials: ["birch", "ash", "linen"],
     preferredColors: ["terracotta", "sand", "olive"],
   },
   {
-    id:'br_007',
+    id:'3vsgads5ek6xal6',
 
     name: "Loft Design",
 
@@ -135,7 +135,7 @@ preferredMaterials: ["birch", "ash", "linen"],
     preferredColors: ["black", "gray", "mustard"],
   },
   {
-    id:'br_008',
+    id:'zz92iap7h1xi63i',
 
     name: "Scandi House",
 

@@ -1,10 +1,9 @@
 import { ProductIdentity } from "../core/types/product-identity";
+import {config} from "../config";
 
-const GALLERY_SIZE = 4; 
-const POOL_SIZE = 10;   
 
 function pickUniqueIndexes(count: number, max: number): number[] {
-  const pool = Array.from({ length: max }, (_, i) => i + 1); // [1..max]
+  const pool = Array.from({ length: max }, (_, i) => i + 1); 
 
   // Fisher-Yates shuffle
   for (let i = pool.length - 1; i > 0; i--) {
@@ -16,7 +15,7 @@ function pickUniqueIndexes(count: number, max: number): number[] {
 }
 
 export function generateImages(identity: ProductIdentity): string[] {
-  const indexes = pickUniqueIndexes(GALLERY_SIZE, POOL_SIZE);
+  const indexes = pickUniqueIndexes(config.gallerySize, config.poolSize);
 
   return indexes.map(
     (i) => `/images/products/${identity.productType.slug}/${identity.productType.slug}-${i}.jpg`

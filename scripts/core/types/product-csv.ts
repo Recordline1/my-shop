@@ -5,6 +5,8 @@ export interface ProductCsv {
 
   image?: string;
 
+  images: string;
+
   price: number;
   old_price: number | "";
 

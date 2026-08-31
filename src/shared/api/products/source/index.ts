@@ -1,2 +1,2 @@
-export { getProductsSource } from "./json";
-// export { getProductsSource } from "./pocketbase";
+// export { getProductsSource } from "./json";
+export { getProductsSource } from "./pocketbase";

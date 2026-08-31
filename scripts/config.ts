@@ -6,4 +6,8 @@ export const config = {
   maxImages: 3,
 
   currency: "$",
+
+  gallerySize:4,
+
+  poolSize:10
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from '@widgets/header/ui/Header';
 import { AuthProvider } from '@shared/lib/AuthContext';
+import {Footer} from "@widgets/footer/ui/Footer";
 
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <AuthProvider>
           <Header />
           {children}
+          <Footer />
         </AuthProvider>
       </body>
     </html>

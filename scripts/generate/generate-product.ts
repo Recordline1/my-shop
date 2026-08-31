@@ -8,13 +8,13 @@ import { generateSize } from './generate-size';
 import { generateOldPrice } from './generate-old-price';
 import { generateWeight } from './generate-weight';
 import { ProductTypeConfig } from '../core/types/product-type-config';
-import { Brand } from '../core/types/brand';
+import { BrandProfile } from '../core/types/brand-profile';
 import { generateProductIdentity } from './generate-product-identity';
 import { generatePrice } from './generate-price';
 import { generateImages } from "./generate-image";
 export function generateProduct(
     productType: ProductTypeConfig,
-    brand: Brand,
+    brand: BrandProfile,
     index: number
 ): Product {
 

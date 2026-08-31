@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:products": "tsx scripts/main.ts"
+    "generate:products": "tsx scripts/main.ts",
+    "import:products": "node --env-file=.env.local scripts/import/import-to-pocketbase.mjs public/data/json/products.json public"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",

@@ -5,7 +5,7 @@ export interface Product {
   name: string;
   slug: string;
   image?: string;
-  images?: string[];
+  images: string[];
 
   description: string;
 

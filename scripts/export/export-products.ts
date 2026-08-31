@@ -9,6 +9,7 @@ export function exportProducts(products: Product[]): ProductCsv[] {
     description: product.description,
 
     image: product.image,
+    images: product.images.join(";"),
 
     price: product.price,
     old_price: product.old_price ?? "",
