@@ -6,7 +6,6 @@ interface DescriptionTemplateData {
   type: string;
   material: string;
   color: string;
-  style: string;
 }
 
 const templates = [
@@ -16,8 +15,8 @@ const templates = [
   ({ brand, model, type, material }: DescriptionTemplateData) =>
     `${brand} presents the ${model} ${type}, made from high-quality ${material} with attention to every detail.`,
 
-  ({ brand, model, type, style }: DescriptionTemplateData) =>
-    `Inspired by ${style.toLowerCase()} design, the ${brand} ${model} ${type} offers timeless aesthetics and excellent functionality.`,
+  ({ brand, model, type }: DescriptionTemplateData) =>
+    `Inspired by design, the ${brand} ${model} ${type} offers timeless aesthetics and excellent functionality.`,
 ];
 
 export function generateDescription(data: ProductIdentity): string {
@@ -35,8 +34,7 @@ export function generateDescription(data: ProductIdentity): string {
       model,
       type:productType.name,
       material,
-      color: colors[0],
-      style:brand.style
+      color: colors[0],     
     }
     );
 }

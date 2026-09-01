@@ -1,7 +1,6 @@
-import { Brand } from "../core/types/brand";
 import { BrandCsv } from "../core/types/brand-csv";
 
-export function exportBrands(brands: Brand[]): BrandCsv[] {
+export function exportBrands(brands: BrandCsv[]): BrandCsv[] {
   return brands.map((brand) => ({
     id: brand.id,
     name: brand.name,

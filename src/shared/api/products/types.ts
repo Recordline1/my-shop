@@ -84,24 +84,25 @@ export interface SearchParams {
 
 
 export interface PocketbaseProductRecord {
-    id: string;
-    name: string;
-    slug: string;
-    description: string;
-    price: number;
-    old_price: number | null;
-    sku: string;
-    label: string;
-    stock: number;
-    inStock: boolean;
-    size: string;
-    colors: string[];
-    materials: string[];
-    weight: number;
-    image: string;   
-    images?: string[];
-    expand?: {
-        category?: { id: string; name: string; slug: string; icon: string, image: string };
-        brand?: { id: string; name: string; slug: string; priceMultiplier: number };
-    };
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  price: number;
+  priceMultiplier: number | 1;
+  old_price: number | null;
+  sku: string;
+  label: string;
+  stock: number;
+  inStock: boolean;
+  size: string;
+  colors: string[];
+  materials: string[];
+  weight: number;
+  image: string;
+  images?: string[];
+  expand?: {
+    category?: { id: string; name: string; slug: string; icon: string, image: string };
+    brand?: { id: string; name: string; slug: string; priceMultiplier: number };
+  };
 }
