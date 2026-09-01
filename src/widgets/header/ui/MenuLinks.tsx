@@ -7,9 +7,7 @@ export const MenuLinks = () => {
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About' },
         { href: '/catalog', label: 'Catalog' },
-        { href: '/contact', label: 'Contact' },
-        { href: '/cart', label: 'Cart' },
-        { href: '/checkout', label: 'Checkout' },
+        { href: '/contact', label: 'Contact' },      
         { href: '/profile', label: 'Profile' },
     ]
 
