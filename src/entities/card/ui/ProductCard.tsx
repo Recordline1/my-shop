@@ -23,6 +23,7 @@ export const ProductCard = ({ product, addItem }: ProductCardProps) => {
     const discount = hasOldPrice
         ? Math.round((1 - product.price / oldPrice) * 100)
         : null
+    const inStock = product.stock > 0
 
     return (
         <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300  bg-white flex flex-col">
@@ -37,6 +38,13 @@ export const ProductCard = ({ product, addItem }: ProductCardProps) => {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                 </div>
+                {inStock ? null : (
+                    <div className="absolute inset-0 bg-gray-500/70  flex items-center justify-center">
+                        <span className="text-white text-lg font-semibold">Out of Stock</span>
+                    </div>
+                )}
+
+
 
                 <div className="absolute top-3 left-3 flex flex-col gap-1.5">
                     {label && (
