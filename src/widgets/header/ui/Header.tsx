@@ -3,7 +3,7 @@ import { TopBar } from './TopBar'
 import { NavBar } from './NavBar'
 import { MobileMenu } from './MobileMenu'
 import {MenuLinks} from './MenuLinks'
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 
 export const gradient = {
     background: 'linear-gradient(135deg, #2d2d2d 0%, #3d3535 40%, #2d2d2d 100%)',
@@ -11,12 +11,10 @@ export const gradient = {
 }
 
 export const Header = () => {
-    const [mounted, setMounted] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
     
 
-    useEffect(() => setMounted(true), [])
-    if (!mounted) return null
+ 
 
     return (
         <header className="sticky top-0 z-50">

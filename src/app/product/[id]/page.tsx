@@ -25,7 +25,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     : null;
 
   return (
-    <main className="max-w-5xl mx-auto p-8">
+    <main className="max-w-5xl mx-auto p-4">
       <Link href="/catalog" className="flex gap-2 items-center text-cyan-600 mb-4">
         <ArrowLeft size={18} /> Back to store
       </Link>

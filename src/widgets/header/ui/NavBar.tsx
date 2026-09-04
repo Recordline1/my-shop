@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react'
 import { UserDropdown } from '@features/auth/ui/UserDropdown'
 import { getCategories } from '@/entities/categories/api/getCategories'
 import { useRouter } from "next/navigation";
-import { Category } from '@shared/types/category'
 import { useDebounce } from 'use-debounce'
 
 
@@ -48,7 +47,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
     return (
         <div style={gradient} className="border-b border-white/10 shadow-md">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
-                <Link href="catalog" className="text-xl font-bold tracking-widest uppercase text-white shrink-0">
+                <Link href="/" className="text-xl font-bold tracking-widest uppercase text-white shrink-0">
                     Furni
                 </Link>
 
