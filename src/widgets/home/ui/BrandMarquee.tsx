@@ -8,7 +8,7 @@ export const BrandMarquee = ({ brands }: { brands: Brand[]}) => {
       <span
         key={brand.slug}
         aria-hidden={hidden || undefined}
-        className="shrink-0 text-3xl font-bold tracking-wide text-gray-300 hover:text-amber-600 transition-colors select-none"
+        className="shrink-0 text-3xl font-bold tracking-wide text-gray-300 hover:text-amber-600  hover:text-shadow-[0_0_30px_#fbbf24] transition-colors select-none"
       >
         {brand.name}
       </span>

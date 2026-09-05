@@ -16,20 +16,26 @@ interface ProductCardProps {
     product: Product;
     addItem: React.ReactNode;
 }
+
 export const ProductCard = ({ product, addItem }: ProductCardProps) => {
-    const label = product.label ? labelConfig[product.label] : null
-    const oldPrice = product.old_price
-    const hasOldPrice = oldPrice !== null && oldPrice > 0
+    const label = product.label ? labelConfig[product.label] : null;
+    const oldPrice = product.old_price;
+    const hasOldPrice = oldPrice !== null && oldPrice > 0 && oldPrice > product.price;
     const discount = hasOldPrice
         ? Math.round((1 - product.price / oldPrice) * 100)
-        : null
-    const inStock = product.stock > 0
+        : null;
+    const showDiscount = discount !== null && discount > 0;
+
+   
+    const showLabel = label && !(product.label === 'sale' && showDiscount);
+
+    const inStock = product.stock > 0;
 
     return (
-        <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300  bg-white flex flex-col">
+        <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white flex flex-col">
 
             <Link href={`/product/${product.id}`} className="block relative">
-                <div className="relative h-56 overflow-hidden ">
+                <div className="relative h-56 overflow-hidden">
                     <Image
                         src={getProductImage(product)}
                         fill
@@ -39,20 +45,18 @@ export const ProductCard = ({ product, addItem }: ProductCardProps) => {
                     />
                 </div>
                 {inStock ? null : (
-                    <div className="absolute inset-0 bg-gray-500/70  flex items-center justify-center">
-                        <span className="text-white text-lg font-semibold">Out of Stock</span>
+                    <div className="absolute inset-0 bg-gray-500/70 flex items-center justify-center">
+                        <span className="text-white text-lg font-semibold">Немає в наявності</span>
                     </div>
                 )}
 
-
-
                 <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-                    {label && (
-                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${label.className}`}>
-                            {label.text}
+                    {showLabel && (
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${label!.className}`}>
+                            {label!.text}
                         </span>
                     )}
-                    {discount && (
+                    {showDiscount && (
                         <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-red-500 text-white">
                             -{discount}%
                         </span>
@@ -73,11 +77,11 @@ export const ProductCard = ({ product, addItem }: ProductCardProps) => {
                 <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center flex-col-reverse mt-auto">
                         <span className="text-lg font-bold text-gray-900">
-                            ${formatPrice(product.price)}
+                            {formatPrice(product.price)} ₴
                         </span>
                         {hasOldPrice && (
                             <span className="text-sm text-gray-400 line-through">
-                                ${formatPrice(oldPrice)}
+                                {formatPrice(oldPrice)} ₴
                             </span>
                         )}
                     </div>

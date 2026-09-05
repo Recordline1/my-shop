@@ -31,7 +31,7 @@ export const CatalogToolbar = ({ total, sort, openFilters }: CatalogToolbarProps
     };
 
     return (
-        <div className=" bg-white/90 backdrop-blur flex justify-between items-center mb-8 border-b border-b-gray-200 py-4">
+        <div className="fixed px-4 md:static bottom-0 left-0 right-0  z-50 bg-white/90 backdrop-blur flex justify-between items-center md:mb-8 border-b border-b-gray-200 py-4">
             <div className="flex items-center gap-2 md:hidden">
                 <span className="text-gray-400 font-bold">Фільтри:</span>
                 <button onClick={openFilters} className="cursor-pointer" aria-label="Відкрити фільтри">

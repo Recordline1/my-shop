@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { Menu, Search, ChevronRight, X } from 'lucide-react'
+import { Menu, Search } from 'lucide-react'
 import { CartIcon } from '@features/cart/ui/CartIcon'
 import { CatalogIcon } from '@shared/icons/CatalogIcon'
 import { categoryIcons } from '@entities/categories/model/categoryIcons'
@@ -45,8 +45,8 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
 
 
     return (
-        <div style={gradient} className="border-b border-white/10 shadow-md">
-            <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+        <div style={gradient} className="relative z-50 border-b border-white/10 shadow-md">
+            <div className="max-w-6xl mx-auto px-6 py-2 md:py-4  flex items-center justify-between gap-6">
                 <Link href="/" className="text-xl font-bold tracking-widest uppercase text-white shrink-0">
                     Furni
                 </Link>
@@ -54,7 +54,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                 <nav className="hidden md:flex items-center gap-4">
                     <button onClick={() => setCatalogOpen(s => !s)} className="flex items-center gap-2 border border-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-600 transition-colors text-lg font-medium cursor-pointer">
                         <CatalogIcon className="w-4 h-4" />
-                        Сategories
+                        Categories
                     </button>
                 </nav>
 
@@ -94,9 +94,9 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                 </div>
             )}
             {catalogOpen && (
-                <div className="border-t border-white/10 bg-white/5 hidden md:block">
+                <div style={gradient} className="absolute top-full left-30 right-0 max-h-[60vh] scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-white/10 overflow-y-auto  border-t max-w-sm border-white/10 bg-white/5 hidden md:block rounded-b-lg  ">
 
-                    <nav className="flex flex-col px-6 py-2 flex-1 overflow-y-auto">
+                    <nav className="flex flex-col px-6 py-2 overflow-auto">
                         {categories.map(category => (
                             <Link
                                 key={category.id}
