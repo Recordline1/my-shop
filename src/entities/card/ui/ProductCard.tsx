@@ -32,7 +32,7 @@ export const ProductCard = ({ product, addItem }: ProductCardProps) => {
     const inStock = product.stock > 0;
 
     return (
-        <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white flex flex-col">
+        <div className="group border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white h-full flex flex-col">
 
             <Link href={`/product/${product.id}`} className="block relative">
                 <div className="relative h-56 overflow-hidden">

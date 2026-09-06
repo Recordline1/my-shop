@@ -1,7 +1,7 @@
 
 import { getProducts } from "@shared/api/products/get-products";
 import { getCategories } from "@shared/api/categories/get-categories";
-import { HeroBannerSection } from "@widgets/home/ui/HeroBannerSection";
+import { HeroSlider } from "@widgets/home/ui/HeroSlider";
 import { CategoryGrid } from "@widgets/home/ui/CategoryGrid";
 import { ProductSection } from "@widgets/home/ui/ProductSection";
 import { BrandMarquee } from "@widgets/home/ui/BrandMarquee";
@@ -19,7 +19,7 @@ export const HeroSection = async () => {
 
     return (
         <section className=" pt-4 md:pt-8">
-            <HeroBannerSection />
+            <HeroSlider />
             <BrandMarquee brands={brands} />
             <CategoryGrid categories={categories} />
             <ProductSection title="Новинки" viewAllHref="/catalog?label=new" products={newProducts.items} />

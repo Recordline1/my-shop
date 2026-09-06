@@ -94,7 +94,7 @@ export const NavBar = ({ gradient, onMenuOpen }: NavBarProps) => {
                 </div>
             )}
             {catalogOpen && (
-                <div style={gradient} className="absolute top-full left-30 right-0 max-h-[60vh] scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-white/10 overflow-y-auto  border-t max-w-sm border-white/10 bg-white/5 hidden md:block rounded-b-lg  ">
+                <div style={gradient} className="absolute top-full left-30 right-0 max-h-[60vh] scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-white/10 overflow-y-auto  border max-w-sm border-white/10 bg-white/5 hidden md:block rounded-b-lg  ">
 
                     <nav className="flex flex-col px-6 py-2 overflow-auto">
                         {categories.map(category => (

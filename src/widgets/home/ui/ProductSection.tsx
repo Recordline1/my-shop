@@ -20,7 +20,7 @@ export const ProductSection = ({ title, viewAllHref, products }: ProductSectionP
                     {`Всі ${title} →`}
                 </Link>
             </div>
-            <div className="flex gap-6 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide">
+            <div className="flex gap-6 overflow-x-auto scrollbar-thin  scrollbar-track-white/10 pb-2 snap-x snap-mandatory">
                 {products.map((product) => (
                     <div
                         key={product.id}
